@@ -1,0 +1,26 @@
+/* ===== BASE ===== */
+@import './base/reset.css';
+@import './base/variables.css';
+@import './base/typography.css';
+
+/* ===== LAYOUT ===== */
+@import './layout/header.css';
+@import './layout/footer.css';
+@import './layout/grid.css';
+
+/* ===== COMPONENTS ===== */
+@import './components/buttons.css';
+@import './components/cards.css';
+@import './components/nav.css';
+
+/* ===== PAGES ===== */
+@import './pages/home.css';
+
+/* ===== GLOBAL ===== */
+body {
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+  color: var(--text-color, #222);
+  background-color: var(--bg-color, #fff);
+  margin: 0;
+  line-height: 1.6;
+}

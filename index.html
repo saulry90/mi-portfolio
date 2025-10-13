@@ -4,13 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio – Saúl Roldán</title>
+    <meta name="description" content="Portfolio personal de Saúl Roldán, diseñador digital y desarrollador web frontend.">
   </head>
+
   <body>
-    <div id="app">
-      <header class="header"></header>
-      <main class="main"></main>
-      <footer class="footer"></footer>
-    </div>
+    <header class="header" id="header">
+      <div class="container">
+        <a href="#" class="logo">Saúl Roldán</a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero" id="hero">
+        <div class="container">
+          <h1>Diseñador Digital & Desarrollador Web</h1>
+          <p>Transformo ideas en experiencias digitales claras, funcionales y atractivas.</p>
+          <a href="#projects" class="btn">Ver proyectos</a>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <h2>Sobre mí</h2>
+          <p>Soy un creador de soluciones web, apasionado por unir el diseño con la funcionalidad.
+
+Mi trabajo consiste en construir experiencias digitales robustas y optimizadas. Mis habilidades en HTML, CSS y JavaScript son la base para crear maquetaciones impecables y eficientes. Más que solo código, me gusta pensar en la experiencia del usuario final. Mi meta es seguir aprendiendo y mejorando en cada proyecto, ofreciendo siempre la mejor versión de mi trabajo para resolver problemas y dar vida a ideas creativas.</p>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="container">
+          <h2>Proyectos destacados</h2>
+          <div class="projects__grid">
+            <!-- Aquí irán las cards de proyectos -->
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2>Contacto</h2>
+          <p>¿Tienes un proyecto en mente o quieres colaborar?</p>
+          <a href="mailto:saulroldan@email.com" class="btn">Escríbeme</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+      <div class="container">
+        <p>&copy; 2025 Saúl Roldán — Todos los derechos reservados</p>
+      </div>
+    </footer>
+
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>

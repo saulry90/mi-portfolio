@@ -1,9 +1,9 @@
 /* Layout general */
 body {
-  font-family: var(--font-primary);
-  color: var(--color-text);
-  background-color: var(--color-light);
   margin: 0;
+  background-color: var(--color-light);
+  color: var(--color-text);
+  font-family: var(--font-primary);
   line-height: 1.6;
 }
 
@@ -13,42 +13,4 @@ body {
   margin: 0 auto;
 }
 
-/* Header fijo y nav básico */
-.header {
-  background-color: var(--color-light);
-  border-bottom: 1px solid #e2e8f0;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
 
-.header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.nav__list {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-
-.nav__list a {
-  text-decoration: none;
-  color: var(--color-primary);
-  font-weight: 500;
-}
-
-/* Secciones */
-section {
-  padding: var(--section-padding) 0;
-}
-
-.footer {
-  text-align: center;
-  padding: 2rem 0;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-}

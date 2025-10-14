@@ -18,9 +18,9 @@
 
 /* ===== GLOBAL ===== */
 body {
-  font-family: var(--font-primary, 'Poppins', sans-serif);
-  color: var(--text-color, #222);
-  background-color: var(--bg-color, #fff);
   margin: 0;
+  background-color: var(--bg-color, #fff);
+  color: var(--text-color, #222);
+  font-family: var(--font-primary, 'Poppins', sans-serif);
   line-height: 1.6;
 }

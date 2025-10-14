@@ -8,18 +8,25 @@
   </head>
 
   <body>
-    <header class="header" id="header">
-      <div class="container">
-        <a href="#" class="logo">Saúl Roldán</a>
+    <header class="header">
+      <div class="container header__inner">
+        <div class="header__logo">
+          <a href="#">Saúl Roldán</a>
+        </div>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="#about">Sobre mí</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
+            <li><a href="#home" class="nav__link">Inicio</a></li>
+            <li><a href="#projects" class="nav__link">Proyectos</a></li>
+            <li><a href="#about" class="nav__link">Sobre mí</a></li>
+            <li><a href="#contact" class="nav__link">Contacto</a></li>
           </ul>
         </nav>
+        <button class="nav__toggle" aria-label="Abrir menú">
+          ☰
+        </button>
       </div>
     </header>
+
 
     <main class="main">
       <section class="hero" id="hero">

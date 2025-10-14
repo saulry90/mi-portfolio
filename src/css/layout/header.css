@@ -1,0 +1,123 @@
+/* === ESTILOS DEL HEADER === */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: var(--space-md) 0;
+  background-color: var(--color-light);
+  box-shadow: var(--shadow-sm);
+}
+
+/* === CONTENEDOR INTERNO === */
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* === LOGO === */
+.header__logo a {
+  font-family: var(--font-primary);
+  font-size: var(--text-lg);
+  font-weight: bold;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.header__logo a:hover {
+  color: var(--color-accent);
+}
+
+/* === MENÚ DE NAVEGACIÓN (MOBILE) === */
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background-color: var(--color-light);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-120%) translateX(0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Clase para mostrar el menú cuando se presiona el botón (JS) */
+.nav--visible {
+  transform: translateY(0) translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* === LISTA DEL MENÚ === */
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  list-style: none;
+  margin: 0;
+  padding: var(--space-md);
+}
+
+/* === ENLACES === */
+.nav__link {
+  display: block;
+  padding: var(--space-sm);
+  color: var(--color-dark);
+  text-decoration: none;
+  font-size: var(--text-base);
+  transition: var(--transition);
+}
+
+.nav__link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border-radius: var(--space-xs);
+}
+
+/* === BOTÓN DEL MENÚ (MOBILE) === */
+.nav__toggle {
+  display: block;
+  background: none;
+  border: none;
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav__toggle:hover {
+  color: var(--color-accent);
+}
+
+/* === MEDIA QUERY PARA ESCRITORIO === */
+@media (min-width: 768px) {
+  .nav {
+    position: static;
+    width: auto;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: var(--space-md);
+    padding: 0;
+  }
+
+  .nav__link {
+    padding: var(--space-sm);
+  }
+
+  .nav__toggle {
+    display: none;
+  }
+}

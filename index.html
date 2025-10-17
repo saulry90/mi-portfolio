@@ -30,12 +30,28 @@
 
     <main class="main">
       <section class="hero" id="hero">
-        <div class="container">
-          <h1>Diseñador Digital & Desarrollador Web</h1>
-          <p>Transformo ideas en experiencias digitales claras, funcionales y atractivas.</p>
-          <a href="#projects" class="btn">Ver proyectos</a>
+        <div class="container hero__inner">
+          <div class="hero__content">
+            <p class="eyebrow">Hola, soy</p>
+            <h1 class="hero__title">Saúl Roldán<span class="hero__accent"> — Frontend Developer</span></h1>
+            <p class="hero__subtitle">
+              Maquetador web con experiencia en HTML/CSS, JavaScript y PHP. Me especializo en interfaces limpias,
+              rendimiento y buenas prácticas de arquitectura frontend.
+            </p>
+
+            <div class="hero__ctas">
+              <a href="#projects" class="btn btn--primary">Ver proyectos</a>
+              <a href="/cv.pdf" class="btn btn--ghost" download>Descargar CV</a>
+            </div>
+          </div>
+
+          <div class="hero__media" aria-hidden="true">
+            <!-- Sustituye image.png por el archivo real en src/assets/images/ -->
+            <img src="/src/assets/images/hero-avatar.png" alt="Avatar de Saúl Roldán" class="hero__image">
+          </div>
         </div>
       </section>
+
 
       <section class="about" id="about">
         <div class="container">

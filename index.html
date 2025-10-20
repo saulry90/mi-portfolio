@@ -2,6 +2,11 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/src/css/style.css" />
+    <!-- Preload fuentes críticas -->
+    <link rel="preload" href="/src/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/src/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio – Saúl Roldán</title>
     <meta name="description" content="Portfolio personal de Saúl Roldán, diseñador digital y desarrollador web frontend.">
@@ -46,8 +51,10 @@
           </div>
 
           <div class="hero__media" aria-hidden="true">
-            <!-- Sustituye image.png por el archivo real en src/assets/images/ -->
-            <img src="/src/assets/images/hero-avatar.png" alt="Avatar de Saúl Roldán" class="hero__image">
+            <picture>
+              <source srcset="/src/assets/images/hero-avatar.webp" type="image/webp">
+              <img src="/src/assets/images/hero-avatar.png" alt="Avatar de Saúl Roldán" class="hero__image" width="554" height="581">
+            </picture>
           </div>
         </div>
       </section>
@@ -62,14 +69,47 @@ Mi trabajo consiste en construir experiencias digitales robustas y optimizadas. 
         </div>
       </section>
 
-      <section class="projects" id="projects">
-        <div class="container">
-          <h2>Proyectos destacados</h2>
-          <div class="projects__grid">
-            <!-- Aquí irán las cards de proyectos -->
-          </div>
+<section class="projects" id="projects">
+  <div class="container">
+    <h2 class="section__title">Proyectos</h2>
+    <p class="section__subtitle">Algunos trabajos recientes</p>
+
+    <div class="projects__list">
+      <article class="project">
+        <div class="project__image">
+          <picture>
+              <source srcset="/src/assets/images/proyecto-car-service.webp" type="image/webp">
+              <img src="/src/assets/images/proyecto-car-service.jpg" alt="Previsualización del proyecto 1" width="620" height="376">
+            </picture>
         </div>
-      </section>
+        <div class="project__content">
+          <h3 class="project__title">Taller Car Service</h3>
+          <p class="project__description">
+            Aplicación web para la gestión de citas de un taller mecánico. Permite registrar, listar y gestionar servicios y reservas mediante un panel sencillo e interfaz adaptable.
+          </p>
+          <a href="https://disatechgo.com/projects/taller-car-service/" class="project__link" target="_blank">Ver proyecto</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="project__image">
+          <picture>
+              <source srcset="/src/assets/images/proyecto-aap-fund.webp" type="image/webp">
+              <img src="/src/assets/images/proyecto-aap-fund.jpg" alt="Previsualización del proyecto 2" width="682" height="396">
+            </picture>
+        </div>
+        <div class="project__content">
+          <h3 class="project__title">Fund 7IM / AAP Fund</h3>
+          <p class="project__description">
+            Página de resultados financieros con estructura clara y jerarquía visual. Maquetación de tablas personalizadas y estilos consistentes para mostrar datos de forma ordenada y legible.
+          </p>
+          <a href="https://saulry90.github.io/Fund_7IM-AAP-Fund-/resultados" class="project__link" target="_blank">Ver proyecto</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
 
       <section class="contact" id="contact">
         <div class="container">

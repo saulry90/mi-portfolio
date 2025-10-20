@@ -35,14 +35,12 @@
   top: 100%;
   left: 0;
   width: 100%;
-
   background-color: var(--color-light);
   box-shadow: var(--shadow-md);
   transform: translateY(-120%) translateX(0);
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-
   transition: transform 0.3s ease-in-out;
 }
 

@@ -1,5 +1,3 @@
-import '../css/style.css';
-
 // ===== MENÚ MÓVIL =====
 document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav__toggle');

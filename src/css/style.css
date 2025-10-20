@@ -1,5 +1,6 @@
 /* ===== BASE ===== */
 @import './base/reset.css';
+@import './base/fonts.css';
 @import './base/variables.css';
 @import './base/typography.css';
 
@@ -15,12 +16,3 @@
 
 /* ===== PAGES ===== */
 @import './pages/home.css';
-
-/* ===== GLOBAL ===== */
-body {
-  margin: 0;
-  background-color: var(--bg-color, #fff);
-  color: var(--text-color, #222);
-  font-family: var(--font-primary, 'Poppins', sans-serif);
-  line-height: 1.6;
-}

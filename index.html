@@ -16,7 +16,7 @@
     <header class="header">
       <div class="container header__inner">
         <div class="header__logo">
-          <a href="#">Saúl Roldán</a>
+          <a href="#">SaúlRoldán</a>
         </div>
         <nav class="nav">
           <ul class="nav__list">
@@ -38,7 +38,7 @@
         <div class="container hero__inner">
           <div class="hero__content">
             <p class="eyebrow">Hola, soy</p>
-            <h1 class="hero__title">Saúl Roldán<span class="hero__accent"> — Frontend Developer</span></h1>
+            <h1 class="hero__title">Saúl<span class="hero__accent"> — Frontend Developer</span></h1>
             <p class="hero__subtitle">
               Maquetador web con experiencia en HTML/CSS, JavaScript y PHP. Me especializo en interfaces limpias,
               rendimiento y buenas prácticas de arquitectura frontend.
@@ -61,54 +61,80 @@
 
 
       <section class="about" id="about">
-        <div class="container">
-          <h2>Sobre mí</h2>
-          <p>Soy un creador de soluciones web, apasionado por unir el diseño con la funcionalidad.
+        <div class="container about__inner">
+          <div class="about__content">
+            <h2 class="section__title">Sobre mí</h2>
+            <p class="about__text">
+              Soy un creador de soluciones web, apasionado por unir el diseño con la funcionalidad.
+              Me enfoco en desarrollar interfaces limpias, escalables y accesibles.
+            </p>
+            <p class="about__text">
+              Disfruto del proceso de maquetación precisa y de la optimización del rendimiento.
+              Actualmente sigo profundizando en arquitectura frontend y React.
+            </p>
 
-Mi trabajo consiste en construir experiencias digitales robustas y optimizadas. Mis habilidades en HTML, CSS y JavaScript son la base para crear maquetaciones impecables y eficientes. Más que solo código, me gusta pensar en la experiencia del usuario final. Mi meta es seguir aprendiendo y mejorando en cada proyecto, ofreciendo siempre la mejor versión de mi trabajo para resolver problemas y dar vida a ideas creativas.</p>
+            <div class="about__skills">
+              <h3 class="about__subtitle">Tecnologías y herramientas</h3>
+              <ul class="skills__list">
+                <li><img src="/src/assets/icons/html.svg" alt="HTML" title="HTML" /></li>
+                <li><img src="/src/assets/icons/css.svg" alt="CSS" title="CSS" /></li>
+                <li><img src="/src/assets/icons/javascript.svg" alt="JavaScript" title="JavaScript" /></li>
+                <li><img src="/src/assets/icons/php.svg" alt="PHP" title="PHP" /></li>
+                <li><img src="/src/assets/icons/react.svg" alt="React" title="React" /></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="about__media">
+            <picture>
+              <source srcset="/src/assets/images/about-photo.webp" type="image/webp">
+              <img src="/src/assets/images/about-photo.jpg" alt="Saúl trabajando en un proyecto web" class="about__image" width="400" height="400">
+            </picture>
+          </div>
         </div>
       </section>
 
-<section class="projects" id="projects">
-  <div class="container">
-    <h2 class="section__title">Proyectos</h2>
-    <p class="section__subtitle">Algunos trabajos recientes</p>
 
-    <div class="projects__list">
-      <article class="project">
-        <div class="project__image">
-          <picture>
-              <source srcset="/src/assets/images/proyecto-car-service.webp" type="image/webp">
-              <img src="/src/assets/images/proyecto-car-service.jpg" alt="Previsualización del proyecto 1" width="620" height="376">
-            </picture>
-        </div>
-        <div class="project__content">
-          <h3 class="project__title">Taller Car Service</h3>
-          <p class="project__description">
-            Aplicación web para la gestión de citas de un taller mecánico. Permite registrar, listar y gestionar servicios y reservas mediante un panel sencillo e interfaz adaptable.
-          </p>
-          <a href="https://disatechgo.com/projects/taller-car-service/" class="project__link" target="_blank">Ver proyecto</a>
-        </div>
-      </article>
+      <section class="projects" id="projects">
+        <div class="container">
+          <h2 class="section__title">Proyectos</h2>
+          <p class="section__subtitle">Algunos trabajos recientes</p>
 
-      <article class="project">
-        <div class="project__image">
-          <picture>
-              <source srcset="/src/assets/images/proyecto-aap-fund.webp" type="image/webp">
-              <img src="/src/assets/images/proyecto-aap-fund.jpg" alt="Previsualización del proyecto 2" width="682" height="396">
-            </picture>
+          <div class="projects__list">
+            <article class="project">
+              <div class="project__image">
+                <picture>
+                    <source srcset="/src/assets/images/proyecto-car-service.webp" type="image/webp">
+                    <img src="/src/assets/images/proyecto-car-service.jpg" alt="Previsualización del proyecto 1" width="620" height="376">
+                  </picture>
+              </div>
+              <div class="project__content">
+                <h3 class="project__title">Taller Car Service</h3>
+                <p class="project__description">
+                  Aplicación web para la gestión de citas de un taller mecánico. Permite registrar, listar y gestionar servicios y reservas mediante un panel sencillo e interfaz adaptable.
+                </p>
+                <a href="https://disatechgo.com/projects/taller-car-service/" class="project__link" target="_blank">Ver proyecto</a>
+              </div>
+            </article>
+
+            <article class="project">
+              <div class="project__image">
+                <picture>
+                    <source srcset="/src/assets/images/proyecto-aap-fund.webp" type="image/webp">
+                    <img src="/src/assets/images/proyecto-aap-fund.jpg" alt="Previsualización del proyecto 2" width="682" height="396">
+                  </picture>
+              </div>
+              <div class="project__content">
+                <h3 class="project__title">Fund 7IM / AAP Fund</h3>
+                <p class="project__description">
+                  Página de resultados financieros con estructura clara y jerarquía visual. Maquetación de tablas personalizadas y estilos consistentes para mostrar datos de forma ordenada y legible.
+                </p>
+                <a href="https://saulry90.github.io/Fund_7IM-AAP-Fund-/resultados" class="project__link" target="_blank">Ver proyecto</a>
+              </div>
+            </article>
+          </div>
         </div>
-        <div class="project__content">
-          <h3 class="project__title">Fund 7IM / AAP Fund</h3>
-          <p class="project__description">
-            Página de resultados financieros con estructura clara y jerarquía visual. Maquetación de tablas personalizadas y estilos consistentes para mostrar datos de forma ordenada y legible.
-          </p>
-          <a href="https://saulry90.github.io/Fund_7IM-AAP-Fund-/resultados" class="project__link" target="_blank">Ver proyecto</a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       <section class="contact" id="contact">

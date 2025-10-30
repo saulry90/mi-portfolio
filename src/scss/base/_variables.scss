@@ -1,0 +1,109 @@
+/* ==================================== */
+/* === VARIABLES GLOBALES (SCSS) === */
+/* ==================================== */
+
+// ------------------------------------
+// 1. COLORES PRINCIPALES
+// ------------------------------------
+$color-primary: #6c63ff;
+$color-secondary: #f5f5f5;
+$color-dark: #1a1a1a;
+$color-light: #ffffff;
+$color-accent: #00bfa6;
+$color-text: #333333;
+
+// ------------------------------------
+// 2. TIPOGRAFÍA
+// ------------------------------------
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Inter', sans-serif;
+$font-base-size: 1rem; // Un valor base si lo necesitas para cálculos
+
+// TAMAÑOS DE FUENTE
+$text-sizes: (
+  xs: 0.75rem,
+  sm: 0.875rem,
+  base: 1rem,
+  lg: 1.25rem,
+  xl: 1.5rem,
+  '2xl': 2rem,
+  '3xl': 3rem,
+);
+
+// Variables individuales para fácil acceso
+$text-xs: map-get($text-sizes, xs);
+$text-sm: map-get($text-sizes, sm);
+$text-base: map-get($text-sizes, base);
+$text-lg: map-get($text-sizes, lg);
+$text-xl: map-get($text-sizes, xl);
+$text-2xl: map-get($text-sizes, '2xl');
+$text-3xl: map-get($text-sizes, '3xl');
+
+
+// ------------------------------------
+// 3. ESPACIADO
+// ------------------------------------
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 32px;
+$space-xl: 64px;
+
+
+// ------------------------------------
+// 4. SOMBRAS
+// ------------------------------------
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+
+
+// ------------------------------------
+// 5. TRANSICIONES
+// ------------------------------------
+$transition-duration: 0.3s;
+$transition-timing: ease;
+$transition-base: all $transition-duration $transition-timing;
+
+
+// ------------------------------------
+// 6. BREAKPOINTS
+// ------------------------------------
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+// Mapa de breakpoints para usar con Mixins de Media Queries (Recomendado)
+$breakpoints: (
+  mobile: $bp-mobile,
+  tablet: $bp-tablet,
+  desktop: $bp-desktop,
+);
+
+
+/* ==================================== */
+/* === MIXINS (Definiciones globales) === */
+/* ==================================== */
+
+// Mixin de Media Query (Uso: @include mq(md) { ... })
+@mixin mq($size, $direction: 'min') {
+  @if map-has-key($breakpoints, $size) {
+    $breakpoint: map-get($breakpoints, $size);
+    @if $direction == 'min' {
+      @media (min-width: $breakpoint) {
+        @content;
+      }
+    } @else if $direction == 'max' {
+      @media (max-width: ($breakpoint - 1px)) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Breakpoint '#{$size}' no existe en la variable $breakpoints.";
+  }
+}
+
+// Mixin de Transición (Uso: @include set-transition;)
+@mixin set-transition($property: all, $duration: $transition-duration, $timing: $transition-timing) {
+  transition: $property $duration $timing;
+}

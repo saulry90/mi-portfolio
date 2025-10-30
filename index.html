@@ -2,14 +2,21 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="/src/css/style.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
     <!-- Preload fuentes críticas -->
-    <link rel="preload" href="/src/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/src/assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/src/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio – Saúl Roldán</title>
-    <meta name="description" content="Portfolio personal de Saúl Roldán, diseñador digital y desarrollador web frontend.">
+    <title>Saúl Roldán | Desarrollador Frontend</title>
+    <meta name="description" content="Portfolio de Saúl Roldán, desarrollador frontend especializado en maquetación.">
+    <link rel="icon" href="src/assets/icons/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#ffffff">
+
   </head>
 
   <body>
@@ -37,17 +44,12 @@
       <section class="hero" id="hero">
         <div class="container hero__inner">
           <div class="hero__content">
-            <p class="eyebrow">Hola, soy</p>
-            <h1 class="hero__title">Saúl<span class="hero__accent"> — Frontend Developer</span></h1>
+            <p class="eyebrow">Hola, soy Saúl</p>
+            <h1 class="hero__title">Desarrollador<br> web Frontend<span class="hero__accent"></span></h1>
             <p class="hero__subtitle">
               Maquetador web con experiencia en HTML/CSS, JavaScript y PHP. Me especializo en interfaces limpias,
               rendimiento y buenas prácticas de arquitectura frontend.
             </p>
-
-            <div class="hero__ctas">
-              <a href="#projects" class="btn btn--primary">Ver proyectos</a>
-              <a href="/cv.pdf" class="btn btn--ghost" download>Descargar CV</a>
-            </div>
           </div>
 
           <div class="hero__media" aria-hidden="true">
@@ -88,7 +90,7 @@
           <div class="about__media">
             <picture>
               <source srcset="/src/assets/images/about-photo.webp" type="image/webp">
-              <img src="/src/assets/images/about-photo.jpg" alt="Saúl trabajando en un proyecto web" class="about__image" width="400" height="400">
+              <img src="/src/assets/images/about-photo.jpg" alt="Saúl trabajando en un proyecto web" class="about__image" width="400" height="400" loading="lazy">
             </picture>
           </div>
         </div>
@@ -105,7 +107,7 @@
               <div class="project__image">
                 <picture>
                     <source srcset="/src/assets/images/proyecto-car-service.webp" type="image/webp">
-                    <img src="/src/assets/images/proyecto-car-service.jpg" alt="Previsualización del proyecto 1" width="620" height="376">
+                    <img src="/src/assets/images/proyecto-car-service.jpg" alt="Previsualización del proyecto 1" width="620" height="376" loading="lazy">
                   </picture>
               </div>
               <div class="project__content">
@@ -121,7 +123,7 @@
               <div class="project__image">
                 <picture>
                     <source srcset="/src/assets/images/proyecto-aap-fund.webp" type="image/webp">
-                    <img src="/src/assets/images/proyecto-aap-fund.jpg" alt="Previsualización del proyecto 2" width="682" height="396">
+                    <img src="/src/assets/images/proyecto-aap-fund.jpg" alt="Previsualización del proyecto 2" width="682" height="396" loading="lazy">
                   </picture>
               </div>
               <div class="project__content">

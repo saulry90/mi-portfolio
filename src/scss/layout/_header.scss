@@ -1,0 +1,133 @@
+@import '../base/variables';
+
+/* ==================================== */
+/* === ESTILOS DEL HEADER === */
+/* ==================================== */
+
+.header {
+  position: sticky;
+  top: 0;
+  height: 85px;
+  padding: $space-md 0;
+  background-color: $color-light;
+  box-shadow: $shadow-sm;
+  z-index: 10;
+
+  // Media Query: Tablet (768px)
+  @include mq(tablet) {
+    height: 75px;
+  }
+
+  /* === CONTENEDOR INTERNO === */
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* === LOGO === */
+  &__logo {
+    a {
+      font-family: $font-primary;
+      font-size: $text-lg;
+      font-weight: bold;
+      color: $color-primary;
+      text-decoration: none;
+      transition: $transition-base;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+
+  /* === MENÚ DE NAVEGACIÓN (MOBILE & DESKTOP) === */
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-light;
+    box-shadow: $shadow-md;
+    transform: translateY(-120%) translateX(0);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out;
+
+    /* Clase para mostrar el menú cuando se presiona el botón (JS) */
+    &--visible {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* === LISTA DEL MENÚ === */
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+      list-style: none;
+      margin: 0;
+      padding: $space-md;
+
+      @include mq(tablet) {
+        flex-direction: row;
+        gap: $space-md;
+        padding: 0;
+      }
+    }
+
+    /* === ENLACES === */
+    &__link {
+      display: block;
+      padding: $space-sm;
+      color: $color-dark;
+      text-decoration: none;
+      font-size: $text-base;
+      transition: $transition-base;
+
+      &:hover {
+        color: $color-primary;
+        background-color: $color-secondary;
+        border-radius: $space-xs;
+      }
+    }
+
+    // Media Query para Desktop (sobrescribe estilos Mobile)
+    @include mq(tablet) {
+      position: static;
+      width: auto;
+      box-shadow: none;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+
+      // Ajuste de padding del link para desktop
+      &__link {
+        padding: $space-sm;
+      }
+    }
+  }
+
+  /* === BOTÓN DEL MENÚ (MOBILE) === */
+  .nav__toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: $text-2xl;
+    color: $color-primary;
+    cursor: pointer;
+    transition: $transition-base;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    @include mq(tablet) {
+      display: none;
+    }
+  }
+}

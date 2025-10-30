@@ -1,0 +1,35 @@
+/* ==================================== */
+/* === FUENTES LOCALES (SCSS) === */
+/* ==================================== */
+
+// Mapa de pesos y nombres de archivo
+$poppins-weights: (
+  100: 'poppins-100',
+  200: 'poppins-200',
+  300: 'poppins-300',
+  400: 'poppins-400',
+  500: 'poppins-500',
+  600: 'poppins-600',
+  700: 'poppins-700',
+  800: 'poppins-800',
+  900: 'poppins-900'
+);
+
+// Mixin para generar la declaración @font-face con la ruta corregida
+@mixin font-face($weight, $file) {
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+    src: url('#{$font-path}#{$file}.woff2') format('woff2'); 
+  }
+}
+
+// Variable de ruta base para fácil ajuste
+$font-path: '../assets/fonts/';
+
+// Generación de las declaraciones
+@each $weight, $file-name in $poppins-weights {
+  @include font-face($weight, $file-name);
+}

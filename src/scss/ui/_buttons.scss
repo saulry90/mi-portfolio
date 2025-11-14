@@ -1,0 +1,29 @@
+@import '../base/variables';
+
+.btn {
+  display: inline-block;
+  padding: $space-sm $space-md;
+  background-color: $color-light;
+  color: $color-text;
+  border-radius: 8px; 
+  font-family: $font-secondary;
+  font-size: $text-base;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  @include set-transition(background-color);   
+
+  &:hover {
+    background-color: $color-accent;
+  }
+}
+
+.btn--primary {
+    background-color: $color-primary;
+    color: $color-light;
+
+    &:hover {
+        background-color: darken($color-primary, 5%);
+        box-shadow: $shadow-lg;
+    }
+}

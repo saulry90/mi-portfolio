@@ -42,3 +42,13 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Elimina los estilos predeterminados */
+button {
+  padding: 0;
+  background-color: transparent; 
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}

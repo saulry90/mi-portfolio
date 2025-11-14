@@ -1,0 +1,76 @@
+@import '../base/variables';
+
+.nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-light;
+    box-shadow: $shadow-md;
+    transform: translateY(-120%) translateX(0);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform 0.3s ease-in-out;
+
+    @include mq(desktop) {
+      position: static;
+      width: auto;
+      box-shadow: none;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+
+      &__link {
+        padding: $space-sm;
+      }
+
+      /* Ocultar el toggle button en desktop */
+      .toggle-button {
+          display: none;
+      }
+    }
+
+    /* Clase para mostrar el menú cuando se presiona el botón (JS) */
+    &--visible {
+      transform: translateY(0) translateX(0);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    /* === LISTA DEL MENÚ === */
+    &__list {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+      list-style: none;
+      margin: 0;
+      padding: $space-md;
+
+      @include mq(desktop) {
+        flex-direction: row;
+        gap: $space-md;
+        padding: 0;
+      }
+    }
+
+    /* === ENLACES === */
+    &__link {
+      display: block;
+      padding: $space-sm;
+      color: $color-dark;
+      text-decoration: none;
+      font-size: $text-base;
+      transition: $transition-base;
+
+      &:hover {
+        color: $color-primary;
+        background-color: $color-secondary;
+        border-radius: $space-xs;
+      }
+    }
+
+
+}

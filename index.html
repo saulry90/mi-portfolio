@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="src/css/style.css" />
     <!-- Preload fuentes críticas -->
+    <link rel="preload" href="src/assets/fonts/poppins-100.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-200.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-300.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="src/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="src/assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="src/assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="src/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="src/assets/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="src/assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="src/assets/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-800.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="src/assets/fonts/poppins-900.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saúl Roldán | Desarrollador Frontend</title>
     <meta name="description" content="Portfolio de Saúl Roldán, desarrollador frontend especializado en maquetación.">
@@ -22,20 +24,25 @@
   <body>
     <header class="header">
       <div class="container header__inner">
-        <div class="header__logo">
-          <a href="#">SaulRoldan</a>
-        </div>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li><a href="#home" class="nav__link">Inicio</a></li>
-            <li><a href="#projects" class="nav__link">Proyectos</a></li>
-            <li><a href="#about" class="nav__link">Sobre mí</a></li>
-            <li><a href="#contact" class="nav__link">Contacto</a></li>
-          </ul>
-        </nav>
-        <button class="nav__toggle" aria-label="Abrir menú">
-          ☰
-        </button>
+          <a href="./" class="logo">Saúl<span class="logo__accent">Roldán</span><span class="logo__dot">·</span></a>
+          
+          <nav class="nav">
+              <ul class="nav__list">
+                  <li class="nav__item"><a href="#home" class="nav__link">Inicio</a></li>
+                  <li class="nav__item"><a href="#projects" class="nav__link">Proyectos</a></li>
+                  <li class="nav__item"><a href="#about" class="nav__link">Sobre mí</a></li>
+                  <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+              </ul>
+          </nav>
+          
+          <button class="toggle-button" aria-label="Abrir menú" aria-expanded="false">
+              <svg class="toggle-button__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                  <path d="M4 6l16 0" />
+                  <path d="M4 12l16 0" />
+                  <path d="M4 18l16 0" />
+              </svg>
+          </button>
       </div>
     </header>
 
@@ -44,20 +51,21 @@
       <section class="hero" id="hero">
         <div class="container hero__inner">
           <div class="hero__content">
-            <p class="eyebrow">Hola, soy Saúl</p>
-            <h1 class="hero__title">Desarrollador<br> web Frontend<span class="hero__accent"></span></h1>
+            <p class="eyebrow">Hola, soy Saúl👋</p>
+            <h1 class="hero__title">Desarrollador web <span class="hero__accent">Frontend</span></h1>
             <p class="hero__subtitle">
-              Maquetador web con experiencia en HTML/CSS, JavaScript y PHP. Me especializo en interfaces limpias,
-              rendimiento y buenas prácticas de arquitectura frontend.
+              Maquetador web con más de 5 años de experiencia. Me especializo en interfaces limpias,
+              rendimiento y buenas prácticas.
             </p>
+            <button class="btn btn--primary hero__button">Contacta conmigo</button>
           </div>
 
           <div class="hero__media" aria-hidden="true">
-            <picture>
-              <source srcset="/src/assets/images/hero-avatar.webp" type="image/webp">
-              <img src="/src/assets/images/hero-avatar.png" alt="Avatar de Saúl Roldán" class="hero__image" width="554" height="581">
+            <picture class="hero__picture">
+                <source srcset="/src/assets/images/hero-avatar.webp" type="image/webp">
+                <img src="/src/assets/images/hero-avatar.png" alt="Avatar de Saúl Roldán" class="avatar" width="554" height="581">
             </picture>
-          </div>
+        </div>
         </div>
       </section>
 

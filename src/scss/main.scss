@@ -1,18 +1,27 @@
 // === BASE ===
 @import 'base/variables';
+@import 'base/mixins';
 @import 'base/fonts';
 @import 'base/reset';
 @import 'base/typography';
 
 // === LAYOUT ===
+@import 'layout/grid';
 @import 'layout/header';
 @import 'layout/footer';
-@import 'layout/grid';
 
-// === COMPONENTS ===
+// === UI & COMPONENTS ===
+@import 'ui/logo';
+@import 'ui/buttons';
+@import 'ui/cards';
+@import 'ui/toggle-button';
+@import 'ui/eyebrow';
+@import 'ui/avatar';
 @import 'components/nav';
-@import 'components/buttons';
-@import 'components/cards';
+@import 'components/hero';
+@import 'components/projects';
+@import 'components/about';
+@import 'components/contact';
 
 // === PAGES ===
 @import 'pages/home';

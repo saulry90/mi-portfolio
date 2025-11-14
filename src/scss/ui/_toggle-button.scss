@@ -1,0 +1,19 @@
+@import '../base/variables';
+
+/* === TOGGLE BUTTON === */
+.toggle-button {
+    cursor: pointer;
+    transition: $transition-base;
+    
+    @include mq(desktop) {
+      display: none;
+    }
+}
+
+.toggle-button__icon {
+    display: block;
+    stroke-width: 2.2px;
+    stroke-linecap: round;
+    color: var(--color-dark);
+    transition: $transition-base;
+}

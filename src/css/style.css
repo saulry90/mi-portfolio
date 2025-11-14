@@ -1,11 +1,5 @@
 @charset "UTF-8";
 /* ==================================== */
-/* === VARIABLES GLOBALES (SCSS) === */
-/* ==================================== */
-/* ==================================== */
-/* === MIXINS (Definiciones globales) === */
-/* ==================================== */
-/* ==================================== */
 /* === FUENTES LOCALES (SCSS) === */
 /* ==================================== */
 @font-face {
@@ -115,22 +109,35 @@ a {
   color: inherit;
 }
 
-/* ==================================== */
-/* === VARIABLES GLOBALES (SCSS) === */
-/* ==================================== */
-/* ==================================== */
-/* === MIXINS (Definiciones globales) === */
-/* ==================================== */
-/* ==================================== */
-/* === ESTILOS DEL HEADER === */
-/* ==================================== */
+/* Elimina los estilos predeterminados */
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  max-width: 1280px;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .header {
   position: sticky;
   top: 0;
-  height: 85px;
-  padding: 16px 0;
+  display: flex;
+  padding: 8px 0;
   background-color: #ffffff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 @media (min-width: 768px) {
@@ -138,126 +145,12 @@ a {
     height: 75px;
   }
 }
-.header {
-  /* === CONTENEDOR INTERNO === */
-}
 .header__inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header {
-  /* === LOGO === */
-}
-.header__logo a {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #6c63ff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.header__logo a:hover {
-  color: #00bfa6;
-}
-.header {
-  /* === MENÚ DE NAVEGACIÓN (MOBILE & DESKTOP) === */
-}
-.header .nav {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transform: translateY(-120%) translateX(0);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  transition: transform 0.3s ease-in-out;
-  /* Clase para mostrar el menú cuando se presiona el botón (JS) */
-}
-.header .nav--visible {
-  transform: translateY(0) translateX(0);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
-}
-.header .nav {
-  /* === LISTA DEL MENÚ === */
-}
-.header .nav__list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  list-style: none;
-  margin: 0;
-  padding: 16px;
-}
-@media (min-width: 768px) {
-  .header .nav__list {
-    flex-direction: row;
-    gap: 16px;
-    padding: 0;
-  }
-}
-.header .nav {
-  /* === ENLACES === */
-}
-.header .nav__link {
-  display: block;
-  padding: 8px;
-  color: #1a1a1a;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-.header .nav__link:hover {
-  color: #6c63ff;
-  background-color: #f5f5f5;
-  border-radius: 4px;
-}
-@media (min-width: 768px) {
-  .header .nav {
-    position: static;
-    width: auto;
-    box-shadow: none;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-  .header .nav__link {
-    padding: 8px;
-  }
-}
-.header {
-  /* === BOTÓN DEL MENÚ (MOBILE) === */
-}
-.header .nav__toggle {
-  display: block;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: #6c63ff;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.header .nav__toggle:hover {
-  color: #00bfa6;
-}
-@media (min-width: 768px) {
-  .header .nav__toggle {
-    display: none;
-  }
-}
 
-/* ==================================== */
-/* === VARIABLES GLOBALES (SCSS) === */
-/* ==================================== */
-/* ==================================== */
-/* === MIXINS (Definiciones globales) === */
-/* ==================================== */
 /* ==================================== */
 /* === ESTILOS DEL FOOTER === */
 /* ==================================== */
@@ -290,74 +183,184 @@ a {
   transform: scale(1.1);
 }
 
-/* ==================================== */
-/* === VARIABLES GLOBALES (SCSS) === */
-/* ==================================== */
-/* ==================================== */
-/* === MIXINS (Definiciones globales) === */
-/* ==================================== */
-/* ==================================== */
-/* === LAYOUT GENERAL === */
-/* ==================================== */
-body {
-  margin: 0;
-  background-color: #ffffff;
-  color: #333333;
+.logo {
+  color: #1a1a1a;
   font-family: "Poppins", sans-serif;
-  line-height: 1.6;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  color: #505bda;
+}
+.logo__accent {
+  font-weight: 300;
+}
+.logo__dot {
+  display: inline-block;
+  color: #505bda;
+  font-size: 1.5rem;
+  line-height: 10px;
+  transform: translateY(5px);
 }
 
-.container {
-  max-width: 1280px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-/* ==================================== */
-/* === VARIABLES GLOBALES (SCSS) === */
-/* ==================================== */
-/* ==================================== */
-/* === MIXINS (Definiciones globales) === */
-/* ==================================== */
-/* ==================================== */
-/* === ESTILOS DE BOTONES === */
-/* ==================================== */
 .btn {
   display: inline-block;
-  background-color: #00bfa6;
-  color: #ffffff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  color: #333333;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
   font-weight: 600;
-  transition: background-color 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 .btn:hover {
   background-color: #00bfa6;
 }
 
-/* ==================================== */
-/* === VARIABLES GLOBALES (SCSS) === */
-/* ==================================== */
-/* ==================================== */
-/* === MIXINS (Definiciones globales) === */
-/* ==================================== */
-/* ==================================== */
-/* === SECCIÓN HERO === */
-/* ==================================== */
+.btn--primary {
+  background-color: #505bda;
+  color: #ffffff;
+}
+.btn--primary:hover {
+  background-color: rgb(58.9504716981, 71.2735849057, 213.5495283019);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* === TOGGLE BUTTON === */
+.toggle-button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+@media (min-width: 1024px) {
+  .toggle-button {
+    display: none;
+  }
+}
+
+.toggle-button__icon {
+  display: block;
+  stroke-width: 2.2px;
+  stroke-linecap: round;
+  color: var(--color-dark);
+  transition: all 0.3s ease;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: #333333;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-120%) translateX(0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.3s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .nav {
+    position: static;
+    width: auto;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .nav__link {
+    padding: 8px;
+  }
+  .nav {
+    /* Ocultar el toggle button en desktop */
+  }
+  .nav .toggle-button {
+    display: none;
+  }
+}
+.nav {
+  /* Clase para mostrar el menú cuando se presiona el botón (JS) */
+}
+.nav--visible {
+  transform: translateY(0) translateX(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.nav {
+  /* === LISTA DEL MENÚ === */
+}
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+}
+@media (min-width: 1024px) {
+  .nav__list {
+    flex-direction: row;
+    gap: 16px;
+    padding: 0;
+  }
+}
+.nav {
+  /* === ENLACES === */
+}
+.nav__link {
+  display: block;
+  padding: 8px;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.nav__link:hover {
+  color: #505bda;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 16px;
-  min-height: calc(100vh - 85px);
+  min-height: calc(100vh - 46px);
   text-align: left;
-  background-color: #ffffff;
   color: #1a1a1a;
   font-family: "Poppins", sans-serif;
-  line-height: 1.4;
   transition: all 0.3s ease;
+}
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    min-height: auto;
+    padding: 64px 0;
+  }
 }
 @media (min-width: 1024px) {
   .hero {
@@ -365,111 +368,80 @@ body {
   }
 }
 .hero__inner {
-  max-width: 300px;
-}
-@media (min-width: 768px) {
-  .hero__inner {
-    display: grid;
-    grid-template-columns: 1fr 30%;
-    gap: 64px;
-    align-items: center;
-    max-width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 @media (min-width: 1024px) {
   .hero__inner {
-    grid-template-columns: 1fr 40%;
+    display: grid;
+    grid-template-columns: 49% 380px;
+    gap: 64px;
+    justify-content: space-between;
+    align-items: center;
   }
-}
-.hero__content {
-  text-align: center;
-}
-.hero .eyebrow {
-  display: inline-block;
-  margin-bottom: 8px;
-  color: #6c63ff;
-  font-size: 1rem;
-  font-weight: 500;
 }
 .hero__title {
   display: block;
-  margin-bottom: 8px;
   color: #1a1a1a;
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
-  line-height: 1.05;
+  font-size: 2.7rem;
+  line-height: 1;
   font-weight: 700;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .hero__title {
     font-size: 3rem;
   }
 }
+@media (min-width: 1024px) {
+  .hero__title {
+    font-size: clamp(3rem, 6vw, 5rem);
+  }
+}
 .hero__accent {
-  display: inline-block;
-  color: #1a1a1a;
-  font-weight: 500;
+  color: #505bda;
 }
 .hero__subtitle {
   display: block;
-  margin-top: 32px;
-  margin-bottom: 16px;
+  margin: 16px 0;
   color: #333333;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
+  line-height: 1.4;
   font-weight: 400;
 }
-.hero__ctas {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-}
-.hero__cta {
-  display: inline-block;
-  padding: 8px 32px;
-  background-color: #6c63ff;
-  border-radius: 4px;
-  color: #ffffff;
-  text-align: center;
-  font-weight: 500;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.hero__cta:hover {
-  display: inline-block;
-  background-color: #00bfa6;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.hero__button {
+  margin-top: 16px;
 }
 .hero__media {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 32px;
 }
 @media (min-width: 768px) {
   .hero__media {
+    width: 100%;
+    height: 100%;
     margin-top: 0;
   }
 }
-.hero__media picture {
-  width: 220px;
+.hero__media .hero__picture {
+  width: 60%;
+  max-width: 275px;
 }
-@media (min-width: 1024px) {
-  .hero__media picture {
-    width: 290px;
+@media (min-width: 768px) {
+  .hero__media .hero__picture {
+    width: 275px;
   }
 }
-.hero__media picture img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
+@media (min-width: 1024px) {
+  .hero__media .hero__picture {
+    width: auto;
+    max-width: 370px;
+    height: auto;
+  }
 }
 
-/* ==================================== */
-/* === SECCIÓN PROJECTS === */
-/* ==================================== */
 .projects {
   position: relative;
   display: block;
@@ -580,7 +552,7 @@ body {
   display: inline-block;
   margin-top: 8px;
   padding: 8px 32px;
-  background-color: #6c63ff;
+  background-color: #505bda;
   border-radius: 4px;
   color: #ffffff;
   text-align: center;
@@ -593,9 +565,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* ==================================== */
-/* === SECCIÓN ABOUT === */
-/* ==================================== */
 .about {
   position: relative;
   display: block;
@@ -736,9 +705,6 @@ body {
   }
 }
 
-/* ==================================== */
-/* === SECCIÓN CONTACT === */
-/* ==================================== */
 .contact {
   position: relative;
   display: block;
@@ -768,7 +734,7 @@ body {
 .contact__btn {
   display: inline-block;
   padding: 8px 32px;
-  background-color: #6c63ff;
+  background-color: #505bda;
   border: none;
   border-radius: 4px;
   color: #ffffff;
@@ -784,4 +750,4 @@ body {
   transition: all 0.3s ease;
 }
 
-/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/base/_variables.scss%22,%22../scss/base/_fonts.scss%22,%22../scss/base/_reset.scss%22,%22../scss/layout/_header.scss%22,%22../scss/layout/_footer.scss%22,%22../scss/layout/_grid.scss%22,%22../scss/components/_buttons.scss%22,%22../scss/pages/_home.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%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%22,%22file%22:%22style.css%22%7D */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../scss/base/_fonts.scss%22,%22../scss/base/_reset.scss%22,%22../scss/layout/_grid.scss%22,%22../scss/base/_variables.scss%22,%22../scss/layout/_header.scss%22,%22../scss/base/_mixins.scss%22,%22../scss/layout/_footer.scss%22,%22../scss/ui/_logo.scss%22,%22../scss/ui/_buttons.scss%22,%22../scss/ui/_toggle-button.scss%22,%22../scss/ui/_eyebrow.scss%22,%22../scss/ui/_avatar.scss%22,%22../scss/components/_nav.scss%22,%22../scss/components/_hero.scss%22,%22../scss/components/_projects.scss%22,%22../scss/components/_about.scss%22,%22../scss/components/_contact.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAA;AACA;AACA;AAiBE;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;AALF;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;AALF;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;AALF;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;AALF;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;AALF;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;AALF;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;AALF;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;AALF;EACE;EACA;EACA,aAjBc;EAkBd;EACA;;ACxBJ;AACA;AACA;AACA;AAEA;AAAA;AAAA;EAGE;EACA;EACA;;;AAGF;EACE;EACA;;;AAGF;EACE;EACA;EACA;;;AAGF;AAAA;AAAA;AAAA;AAAA;EAKE;EACA;;;AAGF;AAAA;AAAA;AAAA;EAIE;;;AAGF;EACE;EACA;;;AAGF;AACA;EACE;EACA;EACA;EACA;EACA;EACA;;;AClDF;EACE;EACA,kBCEY;EDDZ,OCGW;EDFX,aCOa;;;ADJf;EACE;EACA;EACA;;;AEVF;EACE;EACA;EACA;EACA;EACA,kBDDY;ECEZ;;ACUQ;EDhBV;IASI;;;AAGF;EACE;EACA;EACA;;;AEfJ;AACA;AACA;AAEA;EACE,YHHgB;EGIhB;EACA;;AAEA;EACE;EACA;EACA;;AAGF;EACE;EACA;;AAGF;EACE;EACA;EACA;;AAEA;EACE,OHpBO;EGqBP;EACA;;AAEA;EACE,OH1BO;EG2BP;;;AChCR;EACI,OJES;EIDT,aJSW;EIRX,WJ2BM;EI1BN;EACA;EACA,YJqDc;;AInDd;EACE,OJRU;;AIWZ;EACE;;AAGF;EACE;EACA,OJjBU;EIkBV,WJYI;EIXJ;EACA;;;ACrBN;EACE;EACA;EACA,kBLCY;EKAZ,OLEW;EKDX;EACA,aLMe;EKLf,WLsBU;EKrBV;EACA;EACA;EHwBA;;AGrBA;EACE,kBLTW;;;AKaf;EACI,kBLlBY;EKmBZ,OLhBU;;AKkBV;EACI;EACA,YL2BI;;;AMnDZ;AACA;EACI;EACA,YNwDc;;AE3CR;EIfV;IAKM;;;;AAIN;EACI;EACA;EACA;EACA;EACA,YN4Cc;;;AO3DhB;EACE;EACA,OPIS;EOHT,WP4BM;EO3BN;;;ACJJ;EACI;EACA;EACA;;;ACHJ;EACI;EACA;EACA;EACA;EACA,kBTDU;ESEV,YT4CQ;ES3CR;EACA;EACA;EACA;EACA;;APKM;EOhBV;IAcM;IACA;IACA;IACA;IACA;IACA;IACA;;EAEA;IACE,STiBG;;ESxCX;AA0BM;;EACA;IACI;;;AA5BV;AAgCI;;AACA;EACE;EACA;EACA;EACA;;AArCN;AAwCI;;AACA;EACE;EACA;EACA,KTHK;ESIL;EACA;EACA,STNK;;AEzBD;EOyBN;IASI;IACA,KTVG;ISWH;;;AApDR;AAwDI;;AACA;EACE;EACA,STnBK;ESoBL,OTzDO;ES0DP;EACA,WTjCM;ESkCN,YTJY;;ASMZ;EACE,OTjEQ;ESkER,kBTjEU;ESkEV,eT7BG;;;AUvCX;EACE;EACA;EACA;EACA;EACA;EACA;EACA,OVJW;EUKX,aVGa;EUFb,YVkDgB;;AEpCR;EQvBV;IAYI,aV6BO;;;AEhCD;EQTV;IAgBQ;IACA;;;ARDE;EQhBV;IAqBI;;;AAGF;EACE;EACA;EACA,KVeO;;AE1BD;EQQR;IAMI;IACA;IACA,KVWK;IUVL;IACA;;;AAIJ;EACE;EACA,OVrCS;EUsCT,aV9BW;EU+BX;EACA;EACA;;AR5BM;EQsBR;IASI;;;AR/BI;EQsBR;IAaI;;;AAIJ;EACE,OVvDY;;AU0Dd;EACE;EACA;EACA,OVxDS;EUyDT;EACA;EACA;;AAGF;EACE,YV5BO;;AU+BT;EACE;EACA;EACA;;AR3DM;EQwDR;IAMM;IACA;IACA;;;AAGJ;EACI;EACA;;ARrEE;EQmEN;IAKQ;;;ARxEF;EQmEN;IASQ;IACA;IACA;;;;AC9FZ;EACE;EACA;EACA;EACA;EACA,kBXDY;EWEZ,OXHW;EWIX;EACA,aXGa;EWFb,WXoBU;EWnBV;;AAEA;EACE;EACA,eX0BO;EWzBP,OXZS;EWaT;EACA,WXeO;EWdP;;AAGF;EACE;EACA,eXmBO;EWlBP,OXlBS;EWmBT;EACA,WXIM;EWHN;;AAGF;EACE;EACA;EACA,KXUO;EWTP;;ATlBM;EScR;IAOI;IACA;IACA,KXIK;;;AWAT;EACE;EACA;EACA,KXLO;EWMP,SXNO;EWOP,kBX9Cc;EW+Cd,eXVO;EWWP,YXDQ;EWER,YXQc;;AE3CR;ES2BR;IAWI;;;AAGF;EACE,YXRM;EWSN;;AAGF;EACE;EACA;EACA;EACA;EACA,eX5BK;EW6BL;;AAEA;EACE;EACA;EACA;EACA;;AAIJ;EACE;EACA;EACA,KXzCK;;AW4CP;EACE;EACA;EACA,OXpFO;EWqFP;EACA,WX1DI;EW2DJ;;AT1EI;ESoEN;IASI,WX7DG;;;AWiEP;EACE;EACA;EACA,OX9FO;EW+FP;EACA,WXzEM;EW0EN;EACA;;ATxFI;ESiFN;IAUI,WX7EE;;;AWiFN;EACE;EACA,YXzEK;EW0EL;EACA,kBXlHU;EWmHV,eX7EK;EW8EL,OXjHQ;EWkHR;EACA;EACA;EACA,YX9DY;;AWgEZ;EACE,kBXvHO;EWwHP,YXlEU;;;AY3DlB;EACE;EACA;EACA;EACA;EACA,kBZHgB;EYIhB,OZHW;EYIX;EACA,aZGa;EYFb,WZoBU;EYnBV;;AAEA;EACE;EACA;EACA;EACA,KZ2BO;;AE3BD;EUJR;IAOI;IACA;IACA;;;AAIJ;EACE;EACA;EACA,KZaO;EYZP;EACA;;AVdM;EUSR;IAQI;;;AAGF;EACE;EACA,eZEK;EYDL,OZpCO;EYqCP,WZRK;EYSL;EACA;;AV1BI;EUoBN;IASI,WZZG;;;AYiBT;EACE;EACA;EACA,OZ/CS;EYgDT,WZzBQ;EY0BR;EACA;;AVxCM;EUkCR;IASI,WZ7BI;;;AYiCR;EACE;EACA,YZvBO;;AYyBP;EACE;EACA,eZ7BK;EY8BL,OZnEO;EYoEP,WZzCI;EY0CJ;EACA;;AVzDI;EUmDN;IASI,WZ7CE;;;AYiDN;EACE;EACA;EACA,KZ3CK;EY4CL;EACA;EACA;EACA;;AAEA;EACE;EACA;EACA;EACA;EACA;EACA,YZpCU;EYqCV;;AAEA;EACE;EACA;EACA,YZ1CQ;;AYgDhB;EACE;EACA;EACA;EACA;;AV/FM;EU2FR;IAOI;;;AAIJ;EACE;EACA;EACA;EACA;EACA;EACA,eZpFO;EYqFP,YZ5EQ;EY6ER,YZnEc;;AYqEd;EACE,YZ/EM;EYgFN;EACA,YZxEY;;AE3CR;EUsGR;IAiBI;;;AVvHI;EUsGR;IAqBI;;;;AC3IN;EACE;EACA;EACA;EACA;EACA,kBbHgB;EaIhB,ObHW;EaIX;EACA,abGa;EaFb,WboBU;EanBV;;AAEA;EACE;EACA;EACA;EACA,ObVS;EaWT;EACA,WbYM;EaXN;;AXHM;EWJR;IAUI,WbSI;;;AaLR;EACE;EACA;EACA,kBb5BY;Ea6BZ;EACA,ebQO;EaPP,Ob5BU;Ea6BV;EACA,WbLQ;EaMR;EACA;EACA;EACA,YbqBc;;AanBd;EACE,kBbpCS;EaqCT,YbiBY%22,%22file%22:%22style.css%22%7D */

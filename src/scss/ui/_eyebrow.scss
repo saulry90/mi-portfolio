@@ -1,0 +1,8 @@
+  @import '../base/variables';
+  
+  .eyebrow {
+    display: inline-block;
+    color: $color-text;
+    font-size: $text-xl;
+    font-weight: 400;
+  }

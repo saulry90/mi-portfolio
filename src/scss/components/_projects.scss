@@ -1,0 +1,132 @@
+@import '../base/variables';
+
+.projects {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-color: $color-light;
+  color: $color-dark;
+  text-align: left;
+  font-family: $font-primary;
+  font-size: $text-base;
+  line-height: 1.5;
+
+  .section__title {
+    display: block;
+    margin-bottom: $space-sm;
+    color: $color-dark;
+    text-align: left;
+    font-size: $text-2xl;
+    font-weight: 600;
+  }
+
+  .section__subtitle {
+    display: block;
+    margin-bottom: $space-lg;
+    color: $color-text;
+    text-align: left;
+    font-size: $text-lg;
+    font-weight: 400;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xl;
+    width: 100%;
+
+    @include mq(tablet) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: $space-xl;
+    }
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    padding: $space-md;
+    background-color: $color-secondary; // Asumiendo --color-bg es $color-secondary
+    border-radius: $space-xs;
+    box-shadow: $shadow-sm;
+    transition: $transition-base;
+
+    @include mq(tablet) {
+      flex-direction: column;
+    }
+
+    &:hover {
+      box-shadow: $shadow-md;
+      transform: translateY(-4px);
+    }
+
+    &__image {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      border-radius: $space-xs;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: $space-sm;
+    }
+
+    &__title {
+      display: block;
+      margin: 0;
+      color: $color-dark;
+      text-align: left;
+      font-size: $text-xl;
+      font-weight: 600;
+
+      @include mq(desktop) {
+        font-size: $text-2xl;
+      }
+    }
+
+    &__description {
+      display: block;
+      margin: 0;
+      color: $color-text;
+      text-align: left;
+      font-size: $text-base;
+      font-weight: 400;
+      line-height: 1.4;
+
+      @include mq(desktop) {
+        font-size: $text-lg;
+      }
+    }
+
+    &__link {
+      display: inline-block;
+      margin-top: $space-sm;
+      padding: $space-sm $space-lg;
+      background-color: $color-primary;
+      border-radius: $space-xs;
+      color: $color-light;
+      text-align: center;
+      font-weight: 500;
+      text-decoration: none;
+      transition: $transition-base;
+
+      &:hover {
+        background-color: $color-accent;
+        transition: $transition-base;
+      }
+    }
+  }
+}

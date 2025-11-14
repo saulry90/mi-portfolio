@@ -1,15 +1,10 @@
 @import '../base/variables';
 
-/* ==================================== */
-/* === LAYOUT GENERAL === */
-/* ==================================== */
-
 body {
   margin: 0;
   background-color: $color-light;
   color: $color-text;
   font-family: $font-primary;
-  line-height: 1.6;
 }
 
 .container {
@@ -17,3 +12,4 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+

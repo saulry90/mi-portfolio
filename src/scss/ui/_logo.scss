@@ -1,0 +1,26 @@
+@import '../base/variables';
+
+.logo {
+    color: $color-dark;
+    font-family: $font-primary;
+    font-size: $text-lg;
+    font-weight: bold;
+    text-decoration: none;
+    transition: $transition-base;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &__accent {
+      font-weight: 300;
+    }
+
+    &__dot {
+      display: inline-block;
+      color: $color-primary;
+      font-size: $text-xl;
+      line-height: 10px;
+      transform: translateY(5px);
+    }
+  }

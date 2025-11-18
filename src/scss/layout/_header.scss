@@ -1,5 +1,3 @@
-@import '../base/variables';
-
 .header {
   position: sticky;
   top: 0;
@@ -12,9 +10,18 @@
     height: 75px;
   }
 
+  &--scrolled {
+    background-color: $color-light;
+    box-shadow: $shadow-sm;
+  }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .logo {
+      width: 145px;
+    }
   }
 }

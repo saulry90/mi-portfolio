@@ -1,15 +1,17 @@
-@import '../base/variables';
-
 .logo {
     color: $color-dark;
     font-family: $font-primary;
-    font-size: $text-lg;
+    font-size: $text-xl;
     font-weight: bold;
     text-decoration: none;
     transition: $transition-base;
 
     &:hover {
       color: $color-primary;
+    }
+
+    .header--scrolled & { 
+        font-size: $text-lg;
     }
 
     &__accent {

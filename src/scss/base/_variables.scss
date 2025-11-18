@@ -59,7 +59,7 @@ $shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
 // ------------------------------------
 $transition-duration: 0.3s;
 $transition-timing: ease;
-$transition-base: all $transition-duration $transition-timing;
+$transition-base: $transition-duration $transition-timing;
 
 
 // ------------------------------------

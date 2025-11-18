@@ -1,0 +1,20 @@
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-sm;
+    color: $color-text;
+    border: none;
+    transition: $transition-base;
+    cursor: pointer;
+
+    @include mq(desktop) {
+        display: none;
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+        line-height: 1;
+        display: block;
+    }
+}

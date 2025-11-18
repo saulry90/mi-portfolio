@@ -24,24 +24,23 @@
   <body>
     <header class="header">
       <div class="container header__inner">
-          <a href="./" class="logo">Saúl<span class="logo__accent">Roldán</span><span class="logo__dot">·</span></a>
+          <a href="#home" class="logo">Saúl<span class="logo__accent">Roldán</span><span class="logo__dot">·</span></a>
           
           <nav class="nav">
               <ul class="nav__list">
-                  <li class="nav__item"><a href="#home" class="nav__link">Inicio</a></li>
-                  <li class="nav__item"><a href="#projects" class="nav__link">Proyectos</a></li>
                   <li class="nav__item"><a href="#about" class="nav__link">Sobre mí</a></li>
+                  <li class="nav__item"><a href="#projects" class="nav__link">Proyectos</a></li>
                   <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
               </ul>
           </nav>
+
+          <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo de color">
+            <i class="theme-toggle__icon fas fa-sun" aria-hidden="true"></i>
+            <i class="theme-toggle__icon fas fa-moon" aria-hidden="true"></i>
+          </button>
           
-          <button class="toggle-button" aria-label="Abrir menú" aria-expanded="false">
-              <svg class="toggle-button__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                  <path d="M4 6l16 0" />
-                  <path d="M4 12l16 0" />
-                  <path d="M4 18l16 0" />
-              </svg>
+          <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+            <i class="menu-toggle__icon fas fa-bars" aria-hidden="true"></i>
           </button>
       </div>
     </header>
@@ -57,7 +56,7 @@
               Maquetador web con más de 5 años de experiencia. Me especializo en interfaces limpias,
               rendimiento y buenas prácticas.
             </p>
-            <button class="btn btn--primary hero__button">Contacta conmigo</button>
+            <button class="btn btn--primary btn--large hero__button">Contacta conmigo</button>
           </div>
 
           <div class="hero__media" aria-hidden="true">
@@ -72,16 +71,21 @@
 
       <section class="about" id="about">
         <div class="container about__inner">
+          <h2 class="section__title">Sobre mí</h2>
           <div class="about__content">
-            <h2 class="section__title">Sobre mí</h2>
-            <p class="about__text">
-              Soy un creador de soluciones web, apasionado por unir el diseño con la funcionalidad.
-              Me enfoco en desarrollar interfaces limpias, escalables y accesibles.
-            </p>
-            <p class="about__text">
-              Disfruto del proceso de maquetación precisa y de la optimización del rendimiento.
-              Actualmente sigo profundizando en arquitectura frontend y React.
-            </p>
+            
+           
+            <div class="content_text">
+              <p class="about__text">
+                Soy un creador de soluciones web, apasionado por unir el diseño con la funcionalidad.
+                Me enfoco en desarrollar interfaces limpias, escalables y accesibles.
+              </p>
+              <p class="about__text">
+                Disfruto del proceso de maquetación precisa y de la optimización del rendimiento.
+                Actualmente sigo profundizando en arquitectura frontend y React.
+              </p>
+            </div>
+            
 
             <div class="about__skills">
               <h3 class="about__subtitle">Tecnologías y herramientas</h3>
@@ -93,13 +97,6 @@
                 <li><img src="/src/assets/icons/react.svg" alt="React" title="React" /></li>
               </ul>
             </div>
-          </div>
-
-          <div class="about__media">
-            <picture>
-              <source srcset="/src/assets/images/about-photo.webp" type="image/webp">
-              <img src="/src/assets/images/about-photo.jpg" alt="Saúl trabajando en un proyecto web" class="about__image" width="400" height="400" loading="lazy">
-            </picture>
           </div>
         </div>
       </section>

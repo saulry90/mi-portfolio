@@ -1,6 +1,3 @@
-
-
-
 // Mixin de Media Query (Uso: @include mq(tablet) { ... })
 @mixin mq($size, $direction: 'min', $max-size: false) {
   @if map-has-key($breakpoints, $size) {

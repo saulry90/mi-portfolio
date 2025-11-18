@@ -1,5 +1,3 @@
-@import '../base/variables';
-
 .hero {
   display: flex;
   flex-direction: column;
@@ -35,6 +33,7 @@
       gap: $space-xl;
       justify-content: space-between;
       align-items: center;
+      transform: translateY(-7vh);
     }
   }
 
@@ -92,9 +91,13 @@
         }
 
         @include mq(desktop) {
-            width: auto;
-            max-width: 370px;
-            height: auto;
+            width: 100%;
+            max-width: 100%;
+            height: 380px;
+            padding: $space-lg;
+            border-radius: 50%;
+            border: 1px solid #505bda63;
+            overflow: hidden;
         }
     }
   }

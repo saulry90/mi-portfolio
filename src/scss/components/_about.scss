@@ -1,5 +1,3 @@
-@import '../base/variables';
-
 .about {
   position: relative;
   display: block;
@@ -14,15 +12,10 @@
 
   &__inner {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     gap: $space-xl;
 
-    @include mq(tablet) {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
   }
 
   &__content {
@@ -30,18 +23,12 @@
     flex-direction: column;
     gap: $space-md;
     width: 100%;
-    max-width: 600px;
-
-    @include mq(tablet) {
-      flex: 1 1 50%;
-    }
     
     .section__title {
       display: block;
       margin-bottom: $space-sm;
       color: $color-dark;
       font-size: $text-2xl;
-      font-weight: 600;
       text-align: left;
 
       @include mq(desktop) {
@@ -104,42 +91,6 @@
           transition: $transition-base;
         }
       }
-    }
-  }
-
-  &__media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-    @include mq(tablet) {
-      flex: 1 1 50%;
-    }
-  }
-
-  &__image {
-    display: block;
-    width: 100%;
-    max-width: 360px;
-    height: auto;
-    object-fit: cover;
-    border-radius: $space-sm;
-    box-shadow: $shadow-sm;
-    transition: $transition-base;
-
-    &:hover {
-      box-shadow: $shadow-md;
-      transform: translateY(-4px);
-      transition: $transition-base;
-    }
-
-    @include mq(tablet) {
-      max-width: 400px;
-    }
-
-    @include mq(desktop) {
-      max-width: 420px;
     }
   }
 }

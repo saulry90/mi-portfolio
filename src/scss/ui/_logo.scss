@@ -17,12 +17,4 @@
     &__accent {
       font-weight: 300;
     }
-
-    &__dot {
-      display: inline-block;
-      color: $color-primary;
-      font-size: $text-xl;
-      line-height: 10px;
-      transform: translateY(5px);
-    }
   }

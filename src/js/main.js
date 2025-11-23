@@ -1,7 +1,7 @@
   // ===== ICONOS FONT AWESOME =====
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faMoon, faSun, faBars } from '@fortawesome/free-solid-svg-icons';
-library.add(faMoon, faSun, faBars);
+import { faMoon, faSun, faBars, faCheck } from '@fortawesome/free-solid-svg-icons';
+library.add(faMoon, faSun, faBars, faCheck);
 dom.watch();
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,12 @@
+.deco-dot {
+    display: inline-block;
+    color: $color-primary;
+    font-size: $text-xl;
+    line-height: 10px;
+    transform: translateY(5px);
+
+    &--large {
+        font-size: 2.5rem;
+        transform: translateY(10px);
+    }
+}

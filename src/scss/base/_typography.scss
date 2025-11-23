@@ -1,0 +1,24 @@
+body {
+    background-color: $color-light;
+    color: $color-text;
+    font-family: $font-primary;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    
+    @include mq(desktop) {
+        font-size: $text-lg; 
+    }
+}
+
+p {
+    margin: 0.7rem 0;
+}
+
+.section__title {
+    text-align: left;
+    font-size: 2.5rem;
+
+    @include mq(desktop) {
+      font-size: $text-3xl;
+    }
+}

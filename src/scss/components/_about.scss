@@ -1,96 +1,42 @@
 .about {
-  position: relative;
-  display: block;
-  width: 100%;
-  margin: 0 auto;
-  background-color: $color-secondary;
-  color: $color-dark;
-  text-align: left;
-  font-family: $font-primary;
-  font-size: $text-base;
-  line-height: 1.5;
-
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: $space-xl;
-
-  }
+  padding-bottom: $space-2xl;
 
   &__content {
     display: flex;
     flex-direction: column;
     gap: $space-md;
     width: 100%;
-    
-    .section__title {
-      display: block;
-      margin-bottom: $space-sm;
-      color: $color-dark;
-      font-size: $text-2xl;
-      text-align: left;
-
-      @include mq(desktop) {
-        font-size: $text-3xl;
-      }
-    }
   }
 
   &__text {
-    display: block;
-    margin: 0;
-    color: $color-text;
-    font-size: $text-base;
-    font-weight: 400;
-    line-height: 1.6;
-
-    @include mq(desktop) {
-      font-size: $text-lg;
+    position: relative;
+    padding-left: 28px;
+    .fa-check {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      color: $color-primary;
     }
   }
 
   &__skills {
     display: block;
-    margin-top: $space-lg;
-
-    .about__subtitle {
-      display: block;
-      margin-bottom: $space-sm;
-      color: $color-dark;
-      font-size: $text-lg;
-      font-weight: 500;
-      text-align: left;
-
-      @include mq(tablet) {
-        font-size: $text-xl;
-      }
-    }
-
-    .skills__list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: $space-sm;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-
-      img {
-        display: block;
-        width: 42px;
-        height: 42px;
-        object-fit: contain;
-        opacity: 0.9;
-        transition: $transition-base;
-        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
-
-        &:hover {
-          opacity: 1;
-          transform: scale(1.1);
-          transition: $transition-base;
-        }
-      }
-    }
   }
+
+  .skills__blocks-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: $space-lg;
+        margin-top: $space-md;
+        
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+
+    .skills__category__title { 
+      margin-bottom: $space-md;
+      font-weight: 700;
+    }
 }

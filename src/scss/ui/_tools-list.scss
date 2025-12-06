@@ -1,7 +1,9 @@
-.skills__list {
-    display: grid;
+.tools__list {
+    /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: $space-sm; 
+    gap: $space-sm;  */
+    display: flex;
+    gap: $space-sm;
     width: 80%;
     margin: 0;
     padding: 0;
@@ -15,8 +17,8 @@
 
       svg { 
         display: block;
-        width: 15px;
-        height: 15px;
+        width: 25px;
+        height: 25px;
         object-fit: contain;
         opacity: 0.9;
         transition: $transition-base;

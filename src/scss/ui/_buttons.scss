@@ -20,9 +20,19 @@
     color: $color-light;
 
     &:hover {
-        background-color: darken($color-primary, 5%);
+        background-color: darken($color-primary, 50%);
     }
   }
+
+  &--secondary {
+        background-color: darken($color-secondary, 5%);
+        color: $color-dark;
+
+        &:hover {
+            background-color: darken($color-secondary, 15%);
+            color: $color-dark;
+        }
+    }
 
   &--large {
     @include mq(desktop) {

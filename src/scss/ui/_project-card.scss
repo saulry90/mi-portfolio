@@ -1,0 +1,89 @@
+  .project {
+    display: flex;
+    flex-direction: column; 
+    gap: $space-md;
+
+    &__image {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: $space-lg;
+      background-color: $color-secondary;
+      border-radius: $space-md;
+      overflow: hidden;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: $space-md;
+        box-shadow: $shadow-sm;
+
+        @include mq(tablet) {
+           aspect-ratio: 16 / 9;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: $space-md;
+
+      @include mq(tablet) {
+        flex-grow: 1;
+      }
+    }
+
+    &__title {
+      display: block;
+      margin: 0;
+      color: $color-dark;
+      text-align: left;
+      font-size: $text-lg;
+      font-weight: 700;
+
+      @include mq(desktop) {
+        font-size: $text-xl;
+      }
+    }
+
+    &__info {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: $space-md;
+      margin-bottom: auto;
+    }
+
+    &__description {
+      display: block;
+      margin: 0;
+      color: $color-text;
+      text-align: left;
+      font-size: $text-base;
+      font-weight: 400;
+      line-height: 1.4;
+
+      @include mq(tablet) {
+        margin-bottom: auto;
+      }
+
+      @include mq(desktop) {
+        font-size: $text-lg;
+      }
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: row;
+        gap: $space-sm;
+        margin-top: $space-sm;
+    }
+
+    &__btn {
+      flex: 1;
+    }
+
+  }

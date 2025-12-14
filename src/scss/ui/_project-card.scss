@@ -1,13 +1,25 @@
   .project {
     display: flex;
     flex-direction: column; 
-    gap: $space-md;
+
+    /* &:hover {
+     .project__content {
+      background-color: $color-secondary;
+      border-bottom-right-radius: $space-md;
+      border-bottom-left-radius: $space-md;
+     } 
+
+     .project__image {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+     }
+    } */
 
     &__image {
       display: block;
       width: 100%;
       margin: 0;
-      padding: $space-lg;
+      padding: $space-md;
       background-color: $color-secondary;
       border-radius: $space-md;
       overflow: hidden;
@@ -31,6 +43,7 @@
       display: flex;
       flex-direction: column;
       gap: $space-md;
+      padding: $space-md;
 
       @include mq(tablet) {
         flex-grow: 1;
@@ -62,16 +75,11 @@
       margin: 0;
       color: $color-text;
       text-align: left;
-      font-size: $text-base;
       font-weight: 400;
       line-height: 1.4;
 
       @include mq(tablet) {
         margin-bottom: auto;
-      }
-
-      @include mq(desktop) {
-        font-size: $text-lg;
       }
     }
 

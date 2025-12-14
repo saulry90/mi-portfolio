@@ -57,6 +57,7 @@
               rendimiento y buenas prácticas.
             </p>
             <button class="btn btn--primary btn--large hero__button">Contacta conmigo</button>
+            <button class="btn btn--secondary btn--large hero__button">Descargar CV</button>
           </div>
 
           <div class="hero__media" aria-hidden="true">
@@ -203,41 +204,81 @@
 
 
       <section class="contact" id="contact">
-        <div class="container contact__inner">
-          <h2 class="section__title">Contacto</h2>
-          <p class="contact__text">
-            ¿Tienes un proyecto en mente o quieres colaborar?  
-            Estoy abierto a nuevas oportunidades y proyectos interesantes.
-          </p>
-          <a href="mailto:saulroldan@email.com" class="btn btn--primary contact__btn">
-            Escríbeme
-          </a>
-        </div>
-      </section>
+        <div class="container">
+          <h2 class="section__title">Contacto<span class="deco-dot deco-dot--large">·</span></h2>
+          <div class="contact__inner">
+          <div class="contact__sidebar">
+            <p class="contact__text">¿Tienes un proyecto en mente o quieres colaborar? Mándame un mensaje directo rellenando el formulario.</p>
 
+            <div class="contact__channels">
+              <div class="contact__channel">
+                <h3 class="contact__channel__title">Mi correo directo es:</h3> 
+                <ul class="socials__list">
+                  <li class="socials__list__item">
+                      <a href="mailto:saulroldan@email.com" class="socials__link" aria-label="Email">
+                        <span class="socials__icon">
+                          <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        saulroldan@email.com
+                      </a>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="contact__channel">
+                <h3 class="contact__channel__title">También puedes conectarte en mis redes:</h3>
+                <ul class="socials__list">
+                  <li class="socials__list__item">
+                      <a href="https://www.linkedin.com/in/saul-roldan/" class="socials__link" aria-label="LinkedIn" target="_blank">
+                        <span class="socials__icon">
+                          <i class="fa-brands fa-linkedin"></i>
+                        </span>
+                        Linkedin
+                      </a>
+                  </li>
+                  <li class="socials__list__item">
+                      <a href="https://github.com/saulry90/" class="socials__link" aria-label="GitHub" target="_blank">
+                        <span class="socials__icon">
+                          <i class="fa-brands fa-github"></i>
+                        </span>
+                        Github
+                      </a>
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+            
+          </div>
+          
+
+          <div class="contact__form-wrapper">
+            <form action="/success-page" method="POST" class="form">
+              <div class="form__group">
+                  <label for="name" class="form__label">Nombre</label>
+                  <input type="text" id="name" name="name" class="form__input" placeholder="Tu nombre" required>
+              </div>
+              <div class="form__group">
+                  <label for="email" class="form__label">Email</label>
+                  <input type="email" id="email" name="email" class="form__input" placeholder="correo@ejemplo.com" required>
+              </div>
+              <div class="form__group">
+                  <label for="message" class="form__label">Mensaje</label>
+                  <textarea id="message" name="message" class="form__textarea" placeholder="Describe tu proyecto o consulta..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn--primary form__submit">
+                  Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+        
+      </section>
     </main>
 
     <footer class="footer">
       <div class="container">
         <p>&copy; 2025 Saul Roldan. Todos los derechos reservados.</p>
-
-        <ul class="social-links">
-          <li>
-            <a href="https://github.com/saulroldan" target="_blank" aria-label="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/saulroldan" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:saulroldan.dev@gmail.com" aria-label="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
-          </li>
-        </ul>
       </div>
     </footer>
 

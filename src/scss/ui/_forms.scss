@@ -1,0 +1,52 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+    width: 100%;
+
+    &__group {
+        display: flex;
+        flex-direction: column;
+        gap: $space-xs;
+        width: 100%;
+    }
+
+    &__label {
+        text-align: left;
+        font-size: $text-base;
+        font-weight: 600;
+    }
+
+    &__input,
+    &__textarea {
+        width: 100%;
+        padding: $space-sm;
+        border: 1px solid;
+        border-radius: 6px;
+        background-color: $color-light;
+        color: $color-text;
+        font-size: $text-base;
+        font-family: inherit;
+        transition: border-color $transition-base;
+
+        &:focus {
+            outline: none;
+            border-color: $color-primary;
+            box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
+        }
+        
+        &::placeholder {
+            opacity: 0.8;
+        }
+    }
+
+    &__textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    &__submit {
+        width: 100%;
+        margin-top: $space-xs;
+    }
+}

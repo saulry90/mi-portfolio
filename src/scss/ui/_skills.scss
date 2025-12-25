@@ -1,0 +1,26 @@
+.skills__group {
+    &__title {
+        margin-bottom: $space-sm;
+    }
+}
+
+.skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-sm;
+    list-style: none;
+
+    @include mq(desktop) {
+        gap: $space-md;
+    }
+
+    &__item {
+        background-color: $color-secondary;
+        padding: $space-sm $space-md;
+        border-radius: $space-xs;
+        font-size: $text-sm; 
+        font-weight: 500;
+    }
+}
+
+

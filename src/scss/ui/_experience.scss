@@ -1,0 +1,63 @@
+.experience {
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: $space-md;
+        margin-bottom: $space-lg;
+
+        @include mq(desktop) {
+            margin-bottom: $space-xl;
+        }
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+
+        @include mq(desktop) {
+            width: 40px;
+            height: 40px;
+        }
+        
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    &__info {
+        margin-bottom: $space-md;
+
+        .experience__title {
+            margin: 0;
+            line-height: 1;
+        }
+
+        .experience__company {
+            margin: 0;
+            font-size: $text-sm;
+            color: $color-primary;
+            font-weight: 500;
+        }
+    }
+
+    &__achievements {
+        li {
+            display: flex;
+            align-items: flex-start;
+            gap: $space-sm;
+            margin-bottom: $space-sm;
+            font-size: $text-sm;
+
+            @include mq(desktop) {
+                font-size: $text-base;
+            }
+        }
+    }
+}

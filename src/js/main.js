@@ -1,8 +1,8 @@
   // ===== ICONOS FONT AWESOME =====
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
-import { faMoon, faSun, faBars, faCheck, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faMoon, faSun, faBars, faCheck, faEnvelope, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-library.add(faMoon, faSun, faBars, faCheck, faLinkedin, faGithub, faEnvelope);
+library.add(faMoon, faSun, faBars, faCheck, faLinkedin, faGithub, faEnvelope, faArrowUpRightFromSquare);
 dom.watch();
 
 document.addEventListener('DOMContentLoaded', () => {

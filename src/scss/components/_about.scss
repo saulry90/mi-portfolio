@@ -18,11 +18,12 @@
 
   &__skills {
     &__title {
-      font-size: $text-xl;
       margin-bottom: $space-md;
+      font-size: $text-xl;
+      font-weight: 500;
 
       @include mq(desktop) {
-        font-size: $text-2xl;
+        font-size: 2.25rem;
       }
     }
 
@@ -33,7 +34,7 @@
 
       @include mq(desktop) {
         grid-template-columns: repeat(2, 1fr);
-        column-gap: $space-2xl;
+        column-gap: $space-xl;
       }
     }
     
@@ -44,11 +45,11 @@
      &__title {
       margin-bottom: $space-md;
       font-size: $text-xl;
-    
+      font-weight: 500;    
 
       @include mq(desktop) {
         margin-bottom: $space-lg;
-        font-size: $text-2xl;
+        font-size: 2.25rem;
       }
     }
     

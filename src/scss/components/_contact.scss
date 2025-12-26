@@ -1,5 +1,6 @@
 .contact {
-  padding: $space-lg 0 $space-xl;
+  min-height: 100vh;
+  padding: $space-2xl 0;
   background-color: $color-secondary;
 
   .section__title {
@@ -8,15 +9,15 @@
 
   &__inner {
     display: flex;
-    flex-direction: column;
-    gap: $space-lg;
+    flex-direction: column-reverse;
+    gap: $space-xl;
+    margin-top: $space-lg;
 
     @include mq(desktop) {
       flex-direction: row;
       align-items: flex-start;
-      justify-content: space-between;
-      gap: $space-xl;
-      margin-top: $space-lg;
+      justify-content: space-between;  
+      margin-top: $space-xl;    
     }
   }
 
@@ -31,11 +32,23 @@
     }
   }
 
+  &__text {
+    margin: $space-md 0;
+    text-align: center;
+
+    br {
+      display: none;
+
+      @include mq(tablet) {
+        display: inline;
+      }
+    }
+  }
+
   &__channels {
     display: flex;
     flex-direction: column;
     gap: $space-lg;
-    margin-top: $space-md;
   }
 
   &__channel {

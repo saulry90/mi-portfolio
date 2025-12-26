@@ -22,6 +22,14 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+section {
+  scroll-margin-top: 58px;
+
+  @include mq(desktop) {
+    scroll-margin-top: 75px;
+  }
+}
+
 img,
 picture,
 video,

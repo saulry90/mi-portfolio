@@ -11,7 +11,8 @@
       }
 
       .project__icon {
-        color: $color-primary;
+        background-color: $color-primary;
+        color: $color-light;
       }
     }
 
@@ -73,8 +74,15 @@
     }
 
     &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 34px;        
+      height: 34px;
       color: $color-text;
-      transition: color $transition-base;
+      border-radius: 50%;
+      font-size: $text-base;
+      transition: all $transition-base;
     }
 
     &__info {

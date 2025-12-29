@@ -1,5 +1,9 @@
 .projects {
-  padding-bottom: $space-2xl;
+  padding-bottom: $space-xl;
+
+  @include mq(tablet) {
+    padding: $space-2xl 0;
+  }
 
   .section__subtitle {
     display: block;

@@ -27,16 +27,39 @@
             box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
         }
 
-        &:focus + .form__label,
-        &:not(:placeholder-shown) + .form__label {
+        &:focus + .form__label, &:not(:placeholder-shown) + .form__label {
             top: 8px;
-            font-size: 12px;
             color: $color-primary;
+            font-size: 12px;
             font-weight: 700;
         }
         
         &::placeholder {
             opacity: 0.8;
+        }
+
+        &:focus:invalid:not(:placeholder-shown) {
+            border: 1px solid $color-error;
+            box-shadow: 0 0 0 2px rgba($color-error, 0.2);
+        }
+
+        &:not(:placeholder-shown):invalid + .form__label {
+            color: $color-error;
+        }
+
+        &:not(:placeholder-shown):not(:focus):invalid {
+            border: 1px solid $color-error;
+            box-shadow: 0 0 0 2px rgba($color-error, 0.2);
+            
+            & + .form__label {
+                color: $color-error;
+            }
+
+            & ~ .form__error {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
         }
     }
 
@@ -50,14 +73,58 @@
         color: rgba($color-text, 0.7);
         pointer-events: none;
         transition: all $transition-base;
+        z-index: 2;
+    }
+
+    &__error {
+        display: block;
+        margin-top: 4px;
+        padding-left: 4px;
+        color: $color-error;
+        font-size: 11px;
+        font-weight: 700;
+        // Estado inicial oculto
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-5px);
+        transition: all $transition-base;
     }
 
     &__textarea {
         min-height: 120px;
         resize: vertical;
+        margin-bottom: -8px;
     }
 
     &__submit {
         width: 100%;
+    }
+
+    &__success {
+        padding: $space-sm 0;
+        text-align: center;
+        animation: fadeIn 0.5s ease;
+
+        &-content {
+            .fa-paper-plane {
+                margin-bottom: $space-lg;
+                color: $color-primary;
+                font-size: 3rem;
+            }
+
+            h3 { 
+                margin-bottom: $space-md;
+            }
+
+            p { 
+                margin-bottom: $space-lg; 
+                color: $color-text; 
+            }
+        }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 }

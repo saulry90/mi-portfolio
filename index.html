@@ -366,25 +366,37 @@
           
 
           <div class="contact__form-wrapper">
-            <form action="/success-page" method="POST" class="form">
+            <form action="https://formspree.io/f/xqeknzwl" method="POST" class="form" id="contact-form">
               <div class="form__group">
-                <input type="text" id="name" name="name" class="form__input" placeholder=" " required>
+                <input type="text" id="name" name="name" class="form__input" placeholder=" " required pattern="^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$" title="Solo letras">
                 <label for="name" class="form__label">Nombre</label>
+                <span class="form__error">Solo se permiten letras</span>
               </div>
 
               <div class="form__group">
                 <input type="email" id="email" name="email" class="form__input" placeholder=" " required>
                 <label for="email" class="form__label">Email</label>
+                <span class="form__error">Introduce un email válido</span>
               </div>
 
               <div class="form__group">
-                <textarea id="message" name="message" class="form__textarea" placeholder=" " required></textarea>
+                <textarea id="message" name="message" class="form__textarea" placeholder=" " required minlength="20"></textarea>
                 <label for="message" class="form__label">Mensaje</label>
+                <span class="form__error">Mínimo 20 caracteres</span>
               </div>
               <button type="submit" class="btn btn--primary form__submit">
                   Enviar Mensaje
               </button>
             </form>
+
+            <div id="contact-success" class="form__success" hidden>
+              <div class="form__success-content">
+                <i class="fas fa-paper-plane"></i>
+                <h3>¡Mensaje enviado con éxito!</h3>
+                <p>Gracias por contactar. Te responderé lo antes posible.</p>
+                <button type="button" id="btn-reset-form" class="btn btn--primary">Volver a escribir</button>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -393,7 +405,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2025 Saul Roldan. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Saul Roldan.<br> Todos los derechos reservados.</p>
       </div>
     </footer>
 

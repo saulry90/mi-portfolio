@@ -367,6 +367,11 @@
 
           <div class="contact__form-wrapper">
             <form action="https://formspree.io/f/xqeknzwl" method="POST" class="form" id="contact-form">
+              <!-- Honeypot field -->
+              <div class="form__group" style="display:none !important;" aria-hidden="true">
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+              </div>
+
               <div class="form__group">
                 <input type="text" id="name" name="name" class="form__input" placeholder=" " required pattern="^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$" title="Solo letras">
                 <label for="name" class="form__label">Nombre</label>

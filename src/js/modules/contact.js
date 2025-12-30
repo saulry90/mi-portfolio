@@ -7,6 +7,16 @@ export const initContactForm = () => {
 
     $form.addEventListener('submit', async (e) => {
         e.preventDefault();
+
+        // Validación
+        const nameValue = $form.name.value.trim();
+        const emailValue = $form.email.value.trim();
+        const messageValue = $form.message.value.trim();
+
+        if (!nameValue || !emailValue || messageValue.length < 20) {
+            return; 
+        }
+
         const $btn = $form.querySelector('.form__submit');
 
         // 1. Estado "Enviando"

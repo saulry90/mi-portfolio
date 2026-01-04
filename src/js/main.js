@@ -5,6 +5,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { initNavigation } from './modules/navigation.js';
 import { initTheme } from './modules/theme.js';
 import { initContactForm } from './modules/contact.js';
+import { initScrollReveal } from './modules/animations.js';
 
 // Configuración Font Awesome
 library.add(faMoon, faSun, faBars, faCheck, faLinkedin, faGithub, faEnvelope, faArrowUpRightFromSquare, faPaperPlane);
@@ -16,4 +17,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initTheme();
   initContactForm();
+  initScrollReveal();
 });

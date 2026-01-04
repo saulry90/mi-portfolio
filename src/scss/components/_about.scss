@@ -27,6 +27,7 @@
       font-weight: 500;
 
       @include mq(desktop) {
+        margin-bottom: $space-lg;
         font-size: 2.25rem;
       }
     }

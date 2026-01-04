@@ -1,0 +1,21 @@
+// Estado inicial: invisible y un poco desplazado hacia abajo
+.reveal {
+    opacity: 0;
+    transform: translateY(30px) scale(0.96);
+    transition: opacity 1.2s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+
+    // Estado activo: visible y en su posición original
+    &--active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+// Clase para retrasos (delays) en cascada
+@for $i from 1 through 10 {
+    .reveal--delay-#{$i} {
+        transition-delay: #{$i * 0.25}s;
+    }
+}

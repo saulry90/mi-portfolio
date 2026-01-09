@@ -1,13 +1,19 @@
 .footer {
-  padding: $space-md 0;
+  padding: $space-lg 0;
   background: $color-light;
   color: $color-text;
   text-align: center;
+  border-top: 1px solid rgba($color-text, 0.05);
 
   p {
     margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.7;
+
+    #current-year {
+      font-weight: 600;
+    }
 
     br {
       @include mq(tablet) {

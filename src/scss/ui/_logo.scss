@@ -8,6 +8,10 @@
 
     &:hover {
       color: $color-primary;
+
+      .deco-dot {
+        color: $color-dark;
+      }
     }
 
     .header--scrolled & { 

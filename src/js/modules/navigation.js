@@ -11,6 +11,17 @@ export const initNavigation = () => {
             menuToggle.setAttribute('aria-expanded', isExpanded);
         });
 
+        // Cerrar menú al hacer clic fuera
+        document.addEventListener('click', (e) => {
+            const isMenuVisible = nav.classList.contains(MENU_VISIBLE_CLASS);
+            const isClickOutside = !nav.contains(e.target) && !menuToggle.contains(e.target);
+
+            if (isMenuVisible && isClickOutside) {
+                nav.classList.remove(MENU_VISIBLE_CLASS);
+                menuToggle.setAttribute('aria-expanded', false);
+            }
+        });
+
         // Cerrar menú al hacer clic en un enlace
         nav.querySelectorAll('.nav__link').forEach(link => {
             link.addEventListener('click', () => {

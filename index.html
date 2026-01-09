@@ -24,7 +24,7 @@
   <body>
     <header class="header">
       <div class="container header__inner">
-          <a href="#home" class="logo">Saúl<span class="logo__accent">Roldán</span><span class="deco-dot">·</span></a>
+          <a href="#hero" class="logo">Saúl<span class="logo__accent">Roldán</span><span class="deco-dot">·</span></a>
           
           <nav class="nav">
               <ul class="nav__list">
@@ -40,8 +40,12 @@
           </button>
           
           <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
-            <i class="menu-toggle__icon fas fa-bars" aria-hidden="true"></i>
-          </button>
+            <span class="menu-toggle__container">
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+            </span>
+        </button>
       </div>
     </header>
 
@@ -410,7 +414,10 @@
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; 2025 Saul Roldan.<br> Todos los derechos reservados.</p>
+        <p>
+          &copy; <span id="current-year"></span> Saúl Roldán.
+          <br> Todos los derechos reservados.
+        </p>
       </div>
     </footer>
 

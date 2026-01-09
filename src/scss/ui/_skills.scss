@@ -15,8 +15,8 @@
     }
 
     &__item {
-        background-color: $color-secondary;
         padding: $space-sm $space-md;
+        border: 1px solid darken($color-secondary, 5%);
         border-radius: $space-xs;
         font-size: $text-sm; 
         font-weight: 400;

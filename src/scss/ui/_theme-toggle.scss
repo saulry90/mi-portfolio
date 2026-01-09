@@ -12,6 +12,10 @@ $switch-padding: 3px;
     background-color: $color-secondary;
     border: none;
     border-radius: $toggle-size;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    -webkit-font-smoothing: subpixel-antialiased;
+    will-change: transform;
     cursor: pointer;
     overflow: hidden;
     transition: background-color $transition-base, box-shadow $transition-base;
@@ -40,16 +44,22 @@ $switch-padding: 3px;
         position: relative;
         font-size: $toggle-size * 0.4;
         z-index: 2;
+        backface-visibility: hidden;
+        transform: translateZ(0); // Activa 3D para forzar nitidez
+        perspective: 1000px;
+        -webkit-font-smoothing: antialiased;
+        // Evita que el navegador intente optimizar "demasiado"
+        will-change: transform, color;
 
         &.fa-moon {
-            color: $color-text;
-            transform: scale(0.8);
+            color: $color-dark;
+            transform: translateY(0) scale(0.8) translateZ(0);
             transition: transform $transition-base, color $transition-base;
         }
         
         &.fa-sun {
             color: $color-dark;
-            transform: scale(1);
+            transform: translateY(0) scale(1) translateZ(0);
             transition: transform $transition-base, color $transition-base;
         }
     }
@@ -65,17 +75,17 @@ $switch-padding: 3px;
             // Calcula la distancia total que debe moverse el switch horizontalmente.
             // Distancia = (Ancho total del botón) - (Ancho del switch) - (Doble del padding)
             $move-distance: $toggle-size * 2 - ($toggle-size - 2 * $switch-padding) - (2 * $switch-padding);
-            transform: translateY(-50%) translateX($move-distance);
+            transform: translateY(-50%) translateX($move-distance) ;
         }
 
         &__icon {
             &.fa-moon {
                 color: $color-dark;
-                transform: scale(1);
+                transform: translateY(0) scale(1) translateZ(0);
             }
             &.fa-sun {
                 color: $color-dark;
-                transform: scale(0.8);
+                transform: translateY(0) scale(0.8) translateZ(0);
             }
         }
     }

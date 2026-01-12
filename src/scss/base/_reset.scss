@@ -13,8 +13,11 @@ html {
 
 body {
   min-height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-main);
   line-height: 1.5;
   text-rendering: optimizeLegibility;
+  transition: background-color $transition-base, color $transition-base, border-color $transition-base, box-shadow $transition-base;
 }
 
 section {

@@ -1,7 +1,7 @@
 .contact {
   min-height: 100vh;
   padding: $space-xl 0;
-  background-color: $color-secondary;
+  background-color: var(--bg-alt);
 
   @include mq(tablet) {
     padding: $space-2xl 0;
@@ -39,6 +39,7 @@
   &__text {
     margin: $space-md 0;
     text-align: center;
+    color: var(--text-muted);
 
     br {
       display: none;
@@ -59,7 +60,6 @@
     &__title {
       font-size: $text-base;
       font-weight: 700;
-      color: $color-text;
       margin: 0 0 $space-sm 0;
     }
   }

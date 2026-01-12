@@ -5,9 +5,8 @@
   align-items: flex-start;
   min-height: calc(100vh - 46px); // Ajuste para altura de la barra de navegación
   text-align: left;
-  color: $color-dark;
+  color: var(--text-main);
   font-family: $font-primary;
-  transition: $transition-base;
 
   @include mq(tablet, 'max') { 
     padding-top: $space-md;
@@ -39,7 +38,7 @@
 
   &__title {
     display: block;
-    color: $color-dark;
+    color: var(--text-main);
     font-family: $font-primary;
     font-size: 2.7rem;
     line-height: 1;
@@ -61,7 +60,7 @@
   &__subtitle {
     display: block;
     margin: $space-md 0;
-    color: $color-text;
+    color: var(--text-main);
     font-weight: 400;
   }
 
@@ -94,7 +93,7 @@
             height: 380px;
             padding: $space-lg;
             border-radius: 50%;
-            border: 1px solid #505bda63;
+            border: 1px solid var(--hero-border);
             overflow: hidden;
         }
     }

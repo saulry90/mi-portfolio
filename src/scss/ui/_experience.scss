@@ -53,6 +53,7 @@
             align-items: flex-start;
             gap: $space-sm;
             margin-bottom: $space-sm;
+            color: var(--text-muted);
             font-size: $text-sm;
 
             @include mq(desktop) {

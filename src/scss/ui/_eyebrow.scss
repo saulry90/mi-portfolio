@@ -1,6 +1,6 @@
 .eyebrow {
   display: inline-block;
-  color: $color-text;
+  color: var(--text-main);
   font-size: $text-xl;
   font-weight: 400;
 }

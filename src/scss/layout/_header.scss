@@ -3,7 +3,7 @@
   top: 0;
   display: flex;
   padding: $space-md 0;
-  background-color: $color-light;
+  background-color: var(--bg-color);
   z-index: 10;
 
   @include mq(tablet) {
@@ -11,7 +11,7 @@
   }
 
   &--scrolled {
-    background-color: $color-light;
+    background-color: var(--bg-color);
     box-shadow: $shadow-sm;
   }
 

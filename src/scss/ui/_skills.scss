@@ -16,8 +16,9 @@
 
     &__item {
         padding: $space-sm $space-md;
-        border: 1px solid darken($color-secondary, 5%);
+        border: 1px solid var(--text-muted);;
         border-radius: $space-xs;
+        color: var(--text-muted);;
         font-size: $text-sm; 
         font-weight: 400;
     }

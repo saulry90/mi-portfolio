@@ -1,5 +1,4 @@
 .logo {
-    color: $color-dark;
     font-family: $font-primary;
     font-size: $text-xl;
     font-weight: bold;
@@ -10,7 +9,7 @@
       color: $color-primary;
 
       .deco-dot {
-        color: $color-dark;
+        color: var(--text-main);
       }
     }
 

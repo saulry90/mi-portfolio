@@ -4,15 +4,15 @@
   background-color: $color-light;
   color: $color-text;
   border-radius: 40px; 
-  font-family: $font-secondary;
   font-size: $text-base;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
+  transition: background-color $transition-base, transform 0.2s ease, box-shadow $transition-base;
   @include set-transition(background-color);   
 
-  &:hover {
-    background-color: $color-accent;
+  &:active {
+    transform: scale(0.98);
   }
 
   &--primary {
@@ -20,17 +20,21 @@
     color: $color-light;
 
     &:hover {
-        background-color: darken($color-primary, 50%);
+        background-color: adjust-color($color-primary, $lightness: -10%);
+
+        html.is-dark & {
+          background-color: lighten($color-primary, 10%);
+          box-shadow: 0 0 15px rgba($color-primary, 0.4);
+        }
     }
   }
 
   &--secondary {
-    background-color: darken($color-secondary, 5%);
-    color: $color-dark;
+    background-color: var(--bg-alt);
+    color: var(--text-main);
 
     &:hover {
-        background-color: darken($color-secondary, 15%);
-        color: $color-dark;
+        background-color: var(--border-color);
     }
   }
 

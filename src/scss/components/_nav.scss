@@ -5,7 +5,7 @@
     display: grid;
     grid-template-rows: 0fr;
     width: 100%;
-    background-color: $color-light;
+    background-color: var(--bg-color);
     box-shadow: $shadow-md;
     overflow: hidden;
     transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -14,6 +14,7 @@
       position: static;
       display: block;
       width: auto;
+      background-color: transparent;
       box-shadow: none;
       transform: none;
       opacity: 1;
@@ -46,7 +47,7 @@
       @include mq(desktop, 'max') {
         padding: $space-md $space-lg;
         text-align: right;
-        border-top: 1px solid darken($color-secondary, 5%);
+        border-top: 1px solid var(--border-color);
       }
       
       
@@ -56,11 +57,10 @@
     &__link {
       position: relative;
       display: block;
-      color: $color-text;
+      color: var(--text-main);
       text-decoration: none;
       font-size: $text-base;
       font-weight: 600;
-      //transition: $transition-base;
 
       &::after {
         content: '';

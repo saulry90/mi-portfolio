@@ -1,12 +1,13 @@
 .footer {
   padding: $space-lg 0;
-  background: $color-light;
-  color: $color-text;
+  background: var(--bg-color);
+  color: var(--text-main);
   text-align: center;
-  border-top: 1px solid rgba($color-text, 0.05);
+  border-top: 1px solid var(--border-color);
 
   p {
     margin: 0;
+    color: var(--text-muted);
     font-size: 0.85rem;
     font-weight: 500;
     opacity: 0.7;

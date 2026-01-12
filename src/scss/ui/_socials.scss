@@ -10,6 +10,7 @@
             align-items: center;
             gap: $space-md;
             width: fit-content;
+            color: var(--text-muted);
 
             &:hover {
                 color: $color-primary;
@@ -31,7 +32,7 @@
         align-items: center;
         width: 34px;        
         height: 34px;
-        border: 1px solid $color-text;
+        border: 1px solid var(--text-muted);;
         border-radius: 50%;
         font-size: $text-lg;
         transition: background-color $transition-base, border-color $transition-base;

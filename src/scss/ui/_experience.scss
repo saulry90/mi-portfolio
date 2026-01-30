@@ -3,11 +3,15 @@
         display: flex;
         align-items: flex-start;
         gap: $space-md;
-        margin-bottom: $space-lg;
 
-        @include mq(desktop) {
-            margin-bottom: $space-xl;
+        &:not(:last-of-type) {
+            margin-bottom: $space-lg;
+            @include mq(desktop) {
+                margin-bottom: $space-xl;
+            }
         }
+
+        
     }
 
     &__logo {
@@ -58,6 +62,10 @@
 
             @include mq(desktop) {
                 font-size: $text-base;
+            }
+
+            .fa-check {
+                transform: translateY(.2rem);
             }
         }
     }

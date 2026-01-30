@@ -8,23 +8,25 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: $space-lg;
+    gap: $space-xl;
     width: 100%;
 
     @include mq(desktop) {
-      gap: $space-xl;
+      gap: $space-2xl;
     }
   }
 
   &__text {
     position: relative;
+    margin-bottom: $space-md;
     color: var(--text-muted);
+    line-height: 1.7;
   }
 
   &__skills {
     &__title {
       margin-bottom: $space-md;
-      font-size: $text-xl;
+      font-size: 1.75rem;
       font-weight: 500;
 
       @include mq(desktop) {

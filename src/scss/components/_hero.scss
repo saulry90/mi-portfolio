@@ -1,9 +1,10 @@
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   min-height: calc(100vh - 46px); // Ajuste para altura de la barra de navegación
+  padding-bottom: $space-xl;
   text-align: left;
   color: var(--text-main);
   font-family: $font-primary;
@@ -18,7 +19,9 @@
   }
 
   @include mq(desktop) {
+    justify-content: center;
     height: calc(100vh - 75px);
+    padding-bottom: 0;
   }
 
   &__inner {
@@ -28,8 +31,7 @@
 
     @include mq(desktop) {
       display: grid;
-      grid-template-columns: 49% 380px;
-      gap: $space-xl;
+      grid-template-columns: 55% 380px;
       justify-content: space-between;
       align-items: center;
       transform: translateY(-7vh);
@@ -60,12 +62,29 @@
   &__subtitle {
     display: block;
     margin: $space-md 0;
-    color: var(--text-main);
+    color: var(--text-muted);
     font-weight: 400;
   }
 
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    @include mq(tablet) {
+        flex-direction: row;
+    }
+  }
+
   &__button {
-    margin-top: $space-md;
+    flex: 1 1 auto; 
+    max-width: 100%;
+
+    @include mq(tablet) {
+        flex: 0 0 auto; 
+        max-width: none;
+    }
   }
 
   &__media {

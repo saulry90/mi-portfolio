@@ -9,7 +9,6 @@
   text-align: center;
   text-decoration: none;
   transition: background-color $transition-base, transform 0.2s ease, box-shadow $transition-base;
-  @include set-transition(background-color);   
 
   &:active {
     transform: scale(0.98);

@@ -23,7 +23,7 @@
         height: 2px;
         background-color: var(--text-main);
         border-radius: 2px;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        transition: transform $transition-base, opacity $transition-base;
         transform-origin: left center;
     }
 

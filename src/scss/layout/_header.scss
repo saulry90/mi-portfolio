@@ -7,7 +7,7 @@
   z-index: 10;
 
   @include mq(tablet) {
-    height: 75px;
+    height: $header-height;
   }
 
   &--scrolled {

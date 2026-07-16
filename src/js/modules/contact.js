@@ -5,6 +5,27 @@ export const initContactForm = () => {
 
     if (!$form || !$successMsg) return;
 
+    const fields = [
+        { input: $form.name, errorId: 'name-error' },
+        { input: $form.email, errorId: 'email-error' },
+        { input: $form.message, errorId: 'message-error' }
+    ];
+
+    const setFieldInvalid = (input, invalid) => {
+        if (invalid) {
+            input.setAttribute('aria-invalid', 'true');
+        } else {
+            input.removeAttribute('aria-invalid');
+        }
+    };
+
+    fields.forEach(({ input, errorId }) => {
+        if (!input) return;
+        input.addEventListener('invalid', () => setFieldInvalid(input, true));
+        input.addEventListener('input', () => setFieldInvalid(input, !input.validity.valid));
+        input.addEventListener('blur', () => setFieldInvalid(input, !input.validity.valid && input.value.length > 0));
+    });
+
     $form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
@@ -33,10 +54,10 @@ export const initContactForm = () => {
             });
 
             if (response.ok) {
-                // 2. Estado "Éxito"
                 $form.setAttribute('hidden', '');
                 $successMsg.removeAttribute('hidden');
                 $form.reset();
+                fields.forEach(({ input }) => input?.removeAttribute('aria-invalid'));
             } else {
                 throw new Error();
             }
@@ -50,10 +71,11 @@ export const initContactForm = () => {
     $btnReset.addEventListener('click', () => {
         $successMsg.setAttribute('hidden', '');
         $form.removeAttribute('hidden');
-        
-        // Reset del botón de envío a su estado original
+
         const $btn = $form.querySelector('.form__submit');
         $btn.disabled = false;
         $btn.textContent = 'Enviar Mensaje';
+
+        fields.forEach(({ input }) => input?.removeAttribute('aria-invalid'));
     });
 };

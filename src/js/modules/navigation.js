@@ -4,14 +4,18 @@ export const initNavigation = () => {
     const nav = document.querySelector('.nav');
     const MENU_VISIBLE_CLASS = 'nav--visible';
 
+    const updateMenuAriaLabel = (expanded) => {
+        menuToggle.setAttribute('aria-label', expanded ? 'Cerrar menú' : 'Abrir menú');
+    };
+
     if (menuToggle && nav) {
         menuToggle.addEventListener('click', () => {
             nav.classList.toggle(MENU_VISIBLE_CLASS);
             const isExpanded = nav.classList.contains(MENU_VISIBLE_CLASS);
             menuToggle.setAttribute('aria-expanded', isExpanded);
+            updateMenuAriaLabel(isExpanded);
         });
 
-        // Cerrar menú al hacer clic fuera
         document.addEventListener('click', (e) => {
             const isMenuVisible = nav.classList.contains(MENU_VISIBLE_CLASS);
             const isClickOutside = !nav.contains(e.target) && !menuToggle.contains(e.target);
@@ -19,14 +23,15 @@ export const initNavigation = () => {
             if (isMenuVisible && isClickOutside) {
                 nav.classList.remove(MENU_VISIBLE_CLASS);
                 menuToggle.setAttribute('aria-expanded', false);
+                updateMenuAriaLabel(false);
             }
         });
 
-        // Cerrar menú al hacer clic en un enlace
         nav.querySelectorAll('.nav__link').forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove(MENU_VISIBLE_CLASS);
                 menuToggle.setAttribute('aria-expanded', false);
+                updateMenuAriaLabel(false);
             });
         });
     }

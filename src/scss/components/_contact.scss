@@ -1,3 +1,6 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
 .contact {
   min-height: 100vh;
   padding: $space-xl 0;

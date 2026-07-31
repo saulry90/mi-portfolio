@@ -1,3 +1,7 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+@use 'sass:color';
+
 .btn {
   display: inline-block;
   padding: 12px $space-md;
@@ -19,10 +23,10 @@
     color: $color-light;
 
     &:hover {
-        background-color: adjust-color($color-primary, $lightness: -10%);
+        background-color: color.adjust($color-primary, $lightness: -10%);
 
         html.is-dark & {
-          background-color: lighten($color-primary, 10%);
+          background-color: color.adjust($color-primary, $lightness: 10%);
           box-shadow: 0 0 15px rgba($color-primary, 0.4);
         }
     }

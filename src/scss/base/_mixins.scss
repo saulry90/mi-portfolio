@@ -1,11 +1,14 @@
+@use 'sass:map';
+@use 'variables' as *;
+
 // Mixin de Media Query (Uso: @include mq(tablet) { ... })
 @mixin mq($size, $direction: 'min', $max-size: false) {
-  @if map-has-key($breakpoints, $size) {
-      $breakpoint: map-get($breakpoints, $size);
+  @if map.has-key($breakpoints, $size) {
+      $breakpoint: map.get($breakpoints, $size);
 
       // 1. Manejar rangos (Ej. @include mq(tablet, 'min', lg))
-      @if $max-size and map-has-key($breakpoints, $max-size) {
-          $max-breakpoint: map-get($breakpoints, $max-size) - 1px;
+      @if $max-size and map.has-key($breakpoints, $max-size) {
+          $max-breakpoint: map.get($breakpoints, $max-size) - 1px;
           @media (min-width: $breakpoint) and (max-width: $max-breakpoint) {
               @content;
           }

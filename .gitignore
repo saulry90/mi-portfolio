@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# CSS compilado manualmente (ahora Vite genera el CSS desde SCSS)
+src/css/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // ------------------------------------
 // COLORES PRINCIPALES
 // ------------------------------------
@@ -59,13 +61,13 @@ $text-sizes: (
 );
 
 // Variables individuales para fácil acceso
-$text-xs: map-get($text-sizes, xs);
-$text-sm: map-get($text-sizes, sm);
-$text-base: map-get($text-sizes, base);
-$text-lg: map-get($text-sizes, lg);
-$text-xl: map-get($text-sizes, xl);
-$text-2xl: map-get($text-sizes, '2xl');
-$text-3xl: map-get($text-sizes, '3xl');
+$text-xs: map.get($text-sizes, xs);
+$text-sm: map.get($text-sizes, sm);
+$text-base: map.get($text-sizes, base);
+$text-lg: map.get($text-sizes, lg);
+$text-xl: map.get($text-sizes, xl);
+$text-2xl: map.get($text-sizes, '2xl');
+$text-3xl: map.get($text-sizes, '3xl');
 
 
 // ------------------------------------

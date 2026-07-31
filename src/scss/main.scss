@@ -1,34 +1,35 @@
 // === BASE ===
-@import 'base/variables';
-@import 'base/mixins';
-@import 'base/fonts';
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/animations';
+@use 'base/variables' as *;
+@use 'base/mixins' as *;
+@use 'base/fonts';
+@use 'base/reset';
+@use 'base/typography';
+@use 'base/animations';
+
 // === LAYOUT ===
-@import 'layout/grid';
-@import 'layout/header';
-@import 'layout/footer';
+@use 'layout/grid';
+@use 'layout/header';
+@use 'layout/footer';
 
 // === UI & COMPONENTS ===
-@import 'ui/logo';
-@import 'ui/deco-dot';
-@import 'ui/buttons';
-@import 'ui/menu-toggle';
-@import 'ui/theme-toggle';
-@import 'ui/eyebrow';
-@import 'ui/avatar';
-@import 'ui/skills';
-@import 'ui/experience';
-@import 'ui/tools-list';
-@import 'ui/project-card';
-@import 'ui/forms';
-@import 'ui/socials';
-@import 'components/nav';
-@import 'components/hero';
-@import 'components/projects';
-@import 'components/about';
-@import 'components/contact';
+@use 'ui/logo';
+@use 'ui/deco-dot';
+@use 'ui/buttons';
+@use 'ui/menu-toggle';
+@use 'ui/theme-toggle';
+@use 'ui/eyebrow';
+@use 'ui/avatar';
+@use 'ui/skills';
+@use 'ui/experience';
+@use 'ui/tools-list';
+@use 'ui/project-card';
+@use 'ui/forms';
+@use 'ui/socials';
+@use 'components/nav';
+@use 'components/hero';
+@use 'components/projects';
+@use 'components/about';
+@use 'components/contact';
 
 // === PAGES ===
-@import 'pages/home';
+@use 'pages/home';

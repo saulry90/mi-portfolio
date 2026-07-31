@@ -1,3 +1,5 @@
+@use '../base/variables' as *;
+
 .tools__list {
     display: flex;
     gap: $space-sm;

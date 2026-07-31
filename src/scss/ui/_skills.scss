@@ -1,3 +1,6 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
 .skills__group {
     &__title {
         margin-bottom: $space-md;

@@ -2,7 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/scss/main.scss" />
     <!-- Preload fuentes críticas -->
     <link rel="preload" href="src/assets/fonts/poppins-100.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="src/assets/fonts/poppins-200.woff2" as="font" type="font/woff2" crossorigin>
@@ -16,7 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saúl Roldán | Desarrollador Frontend</title>
     <meta name="description" content="Portfolio de Saúl Roldán, desarrollador frontend especializado en maquetación.">
-    <link rel="icon" href="src/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/favicon.png">
     <meta name="theme-color" content="#ffffff">
 
   </head>
@@ -61,15 +62,15 @@
             </p>
             <div class="hero__actions">
               <a href="#contact" class="btn btn--primary btn--large hero__button">Contacta conmigo</a>
-              <button class="btn btn--secondary btn--large hero__button">Descargar CV</button>
+              <a href="/CV26-SAUL-ROLDAN.pdf" download class="btn btn--secondary btn--large hero__button">Descargar CV</a>
             </div>
             
           </div>
 
           <div class="hero__media" aria-hidden="true">
             <picture class="hero__picture">
-                <source srcset="/src/assets/images/hero-avatar.webp" type="image/webp">
-                <img src="/src/assets/images/hero-avatar.png" alt="Avatar de Saúl Roldán" class="avatar" width="554" height="581">
+                <source srcset="src/assets/images/hero-avatar.webp" type="image/webp">
+                <img src="src/assets/images/hero-avatar.png" alt="Avatar de Saúl Roldán" class="avatar" width="554" height="581">
             </picture>
         </div>
         </div>
@@ -230,7 +231,7 @@
                 <div class="project__image">
                   <picture>
                     <source srcset="src/assets/images/proyecto-car-service.webp" type="image/webp">
-                    <img src="src/assets/images/proyecto-car-service.jpg" alt="Previsualización del proyecto car service" width="664" height="452" loading="lazy" decoding="async">
+                    <img src="src/assets/images/proyecto-car-service.png" alt="Previsualización del proyecto car service" width="664" height="452" loading="lazy" decoding="async">
                   </picture>
                 </div>
                 <div class="project__content">
@@ -285,7 +286,7 @@
                 <div class="project__image">
                   <picture>
                     <source srcset="src/assets/images/proyecto-aap-fund.webp" type="image/webp">
-                    <img src="src/assets/images/proyecto-aap-fund.jpg" alt="Previsualización del proyecto aap fund" width="663" height="465" loading="lazy" decoding="async">
+                    <img src="src/assets/images/proyecto-aap-fund.png" alt="Previsualización del proyecto aap fund" width="663" height="465" loading="lazy" decoding="async">
                   </picture>
                 </div>
                 <div class="project__content">
@@ -430,6 +431,6 @@
     </footer>
 
 
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="src/js/main.js"></script>
   </body>
 </html>

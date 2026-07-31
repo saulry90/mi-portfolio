@@ -1,3 +1,5 @@
+@use '../base/variables' as *;
+
 .deco-dot {
     display: inline-block;
     color: $color-primary;

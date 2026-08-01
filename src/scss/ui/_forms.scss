@@ -14,7 +14,7 @@
     &__input,
     &__textarea {
         width: 100%;
-        height: 56px;
+        height: $form-input-height;
         padding: $space-lg 12px $space-sm;
         background-color: var(--bg-color);
         border: 1px solid var(--border-color);
@@ -32,7 +32,7 @@
         &:focus + .form__label, &:not(:placeholder-shown) + .form__label {
             top: 8px;
             color: $color-primary;
-            font-size: 12px;
+            font-size: $form-label-size;
             font-weight: 700;
         }
         
@@ -89,7 +89,7 @@
         margin-top: 4px;
         padding-left: 4px;
         color: $color-error;
-        font-size: 11px;
+        font-size: $form-error-size;
         font-weight: 700;
         // Estado inicial oculto
         opacity: 0;

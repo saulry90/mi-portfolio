@@ -10,6 +10,10 @@ $color-light: #ffffff;
 $color-text: #333333;
 $color-error: #ff6b6b;
 $color-success: #3dbe5b;
+$color-muted: #666666;
+$color-primary-dark: #484d7f;
+$color-bg-alt-dark: #242424;
+$color-muted-dark: #a0a0a0;
 
 // ------------------------------------
 // VARIABLES DINÁMICAS (DARK MODE)
@@ -19,7 +23,7 @@ $color-success: #3dbe5b;
   --bg-color: #{$color-light};
   --bg-alt: #{$color-secondary};
   --text-main: #{$color-text};
-  --text-muted: #666666;
+  --text-muted: #{$color-muted};
   --border-color: rgba(0, 0, 0, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --hero-border: #{$color-primary}63;
@@ -30,13 +34,13 @@ $color-success: #3dbe5b;
 
 html.is-dark {
   // Valores para Modo Oscuro
-  --bg-color: #1a1a1a;
-  --bg-alt: #242424;
-  --text-main: #ffffff;
-  --text-muted: #a0a0a0;
+  --bg-color: #{$color-dark};
+  --bg-alt: #{$color-bg-alt-dark};
+  --text-main: #{$color-light};
+  --text-muted: #{$color-muted-dark};
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.4);
-  --hero-border: #484d7f;
+  --hero-border: #{$color-primary-dark};
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
@@ -68,6 +72,20 @@ $text-lg: map.get($text-sizes, lg);
 $text-xl: map.get($text-sizes, xl);
 $text-2xl: map.get($text-sizes, '2xl');
 $text-3xl: map.get($text-sizes, '3xl');
+
+// Tamaños de títulos (no forman parte de la escala base)
+$text-title: 2.5rem;
+$text-title-lg: 4rem;
+$text-block-title: 1.75rem;
+$text-block-title-lg: 2.25rem;
+$text-hero: 2.7rem;
+$text-hero-lg: 3rem;
+$text-hero-xl: clamp(3rem, 6vw, 5rem);
+
+// Formulario
+$form-input-height: 56px;
+$form-label-size: 12px;
+$form-error-size: 11px;
 
 
 // ------------------------------------

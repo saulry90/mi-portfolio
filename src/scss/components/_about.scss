@@ -29,12 +29,12 @@
   &__skills {
     &__title {
       margin-bottom: $space-md;
-      font-size: 1.75rem;
+      font-size: $text-block-title;
       font-weight: 500;
 
       @include mq(desktop) {
         margin-bottom: $space-lg;
-        font-size: 2.25rem;
+        font-size: $text-block-title-lg;
       }
     }
 
@@ -60,7 +60,7 @@
 
       @include mq(desktop) {
         margin-bottom: $space-lg;
-        font-size: 2.25rem;
+        font-size: $text-block-title-lg;
       }
     }
     

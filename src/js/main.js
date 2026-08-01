@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initContactForm();
   initScrollReveal();
-  initSmoothScroll()
+  initSmoothScroll();
   initFooter();
 });

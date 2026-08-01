@@ -2,17 +2,13 @@
 /* === FUENTES LOCALES (SCSS) === */
 /* ==================================== */
 
-// Mapa de pesos y nombres de archivo
+// Mapa de pesos y nombres de archivo (solo los usados en el proyecto)
 $poppins-weights: (
-  100: 'poppins-100',
-  200: 'poppins-200',
   300: 'poppins-300',
   400: 'poppins-400',
   500: 'poppins-500',
   600: 'poppins-600',
-  700: 'poppins-700',
-  800: 'poppins-800',
-  900: 'poppins-900'
+  700: 'poppins-700'
 );
 
 // Mixin para generar la declaración @font-face con la ruta corregida

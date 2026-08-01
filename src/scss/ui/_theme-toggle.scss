@@ -17,7 +17,6 @@ $switch-padding: 3px;
     backface-visibility: hidden;
     transform: translateZ(0);
     -webkit-font-smoothing: subpixel-antialiased;
-    will-change: transform;
     cursor: pointer;
     overflow: hidden;
     transition: background-color $transition-base, box-shadow $transition-base;
@@ -50,8 +49,6 @@ $switch-padding: 3px;
         transform: translateZ(0); // Activa 3D para forzar nitidez
         perspective: 1000px;
         -webkit-font-smoothing: antialiased;
-        // Evita que el navegador intente optimizar "demasiado"
-        will-change: transform, color;
 
         &.fa-moon {
             color: $color-dark;

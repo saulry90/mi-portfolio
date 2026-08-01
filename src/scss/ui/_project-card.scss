@@ -40,7 +40,6 @@
         object-fit: contain;
         border-radius: $space-md;
         transition: transform $transition-base;
-        will-change: transform;
 
         html.is-dark & {
           filter: brightness(0.9);

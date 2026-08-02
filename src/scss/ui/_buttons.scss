@@ -26,7 +26,7 @@
         background-color: color.adjust($color-primary, $lightness: -10%);
 
         html.is-dark & {
-          background-color: color.adjust($color-primary, $lightness: 10%);
+          background-color: color.adjust($color-primary, $lightness: 5%);
           box-shadow: 0 0 15px rgba($color-primary, 0.4);
         }
     }

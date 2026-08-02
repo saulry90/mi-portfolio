@@ -62,6 +62,7 @@
   </head>
 
   <body>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
     <header class="header">
       <div class="container header__inner">
           <a href="#hero" class="logo">Saúl<span class="logo__accent">Roldán</span><span class="deco-dot">·</span></a>
@@ -90,7 +91,7 @@
     </header>
 
 
-    <main class="main">
+    <main class="main" id="main">
       <section class="hero" id="hero">
         <div class="container hero__inner">
           <div class="hero__content">
@@ -276,7 +277,7 @@
                 <div class="project__content">
                   <div class="project__header">
                     <h3 class="project__title">Taller Car Service</h3>
-                    <span class="project__icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    <span class="project__icon"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
                   </div>
                   <div class="project__info">
                     <p class="project__description">Aplicación para la gestión operativa de un taller mecánico. Diseñé una interfaz intuitiva para centralizar el control de citas, priorizando la facilidad de uso y un panel de administración ágil.</p>
@@ -331,7 +332,7 @@
                 <div class="project__content">
                   <div class="project__header">
                     <h3 class="project__title">Fund 7IM / AAP Fund</h3>
-                    <span class="project__icon"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                    <span class="project__icon"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span>
                     
                   </div>
                   <div class="project__info">
@@ -382,7 +383,7 @@
                   <li class="socials__list__item">
                       <a href="mailto:saulry90@gmail.com" class="socials__link" aria-label="Email">
                         <span class="socials__icon">
-                          <i class="fa-solid fa-envelope"></i>
+                          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                         </span>
                         saulry90@gmail.com
                       </a>
@@ -396,7 +397,7 @@
                   <li class="socials__list__item">
                       <a href="https://www.linkedin.com/in/saul-roldan/" class="socials__link" aria-label="LinkedIn (abre en nueva ventana)" target="_blank" rel="noopener noreferrer">
                         <span class="socials__icon">
-                          <i class="fa-brands fa-linkedin"></i>
+                          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                         </span>
                         Linkedin
                       </a>
@@ -404,7 +405,7 @@
                   <li class="socials__list__item">
                       <a href="https://github.com/saulry90/" class="socials__link" aria-label="GitHub (abre en nueva ventana)" target="_blank" rel="noopener noreferrer">
                         <span class="socials__icon">
-                          <i class="fa-brands fa-github"></i>
+                          <i class="fa-brands fa-github" aria-hidden="true"></i>
                         </span>
                         Github
                       </a>
@@ -427,19 +428,19 @@
               <div class="form__group">
                 <input type="text" id="name" name="name" class="form__input" placeholder=" " required pattern="^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$" title="Solo letras" aria-describedby="name-error">
                 <label for="name" class="form__label">Nombre</label>
-                <span id="name-error" class="form__error" role="alert">Solo se permiten letras</span>
+                <span id="name-error" class="form__error" aria-live="polite">Solo se permiten letras</span>
               </div>
 
               <div class="form__group">
                 <input type="email" id="email" name="email" class="form__input" placeholder=" " required aria-describedby="email-error">
                 <label for="email" class="form__label">Email</label>
-                <span id="email-error" class="form__error" role="alert">Introduce un email válido</span>
+                <span id="email-error" class="form__error" aria-live="polite">Introduce un email válido</span>
               </div>
 
               <div class="form__group">
                 <textarea id="message" name="message" class="form__textarea" placeholder=" " required minlength="20" aria-describedby="message-error"></textarea>
                 <label for="message" class="form__label">Mensaje</label>
-                <span id="message-error" class="form__error" role="alert">Mínimo 20 caracteres</span>
+                <span id="message-error" class="form__error" aria-live="polite">Mínimo 20 caracteres</span>
               </div>
               <button type="submit" class="btn btn--primary form__submit">
                   Enviar Mensaje
@@ -448,7 +449,7 @@
 
             <div id="contact-success" class="form__success" hidden>
               <div class="form__success-content">
-                <i class="fas fa-paper-plane"></i>
+                <i class="fas fa-paper-plane" aria-hidden="true"></i>
                 <h3>¡Mensaje enviado con éxito!</h3>
                 <p>Gracias por contactar. Te responderé lo antes posible.</p>
                 <button type="button" id="btn-reset-form" class="btn btn--primary">Volver a escribir</button>

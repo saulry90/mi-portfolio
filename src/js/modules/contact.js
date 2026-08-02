@@ -19,22 +19,37 @@ export const initContactForm = () => {
         }
     };
 
+    const setErrorVisible = (errorId, visible) => {
+        const $error = document.getElementById(errorId);
+        if (!$error) return;
+        $error.classList.toggle('is-visible', visible);
+    };
+
+    const validateField = (input, errorId) => {
+        const hasValue = input.value.trim().length > 0;
+        const valid = input.validity.valid;
+        setFieldInvalid(input, hasValue && !valid);
+        setErrorVisible(errorId, hasValue && !valid);
+        return hasValue && valid;
+    };
+
     fields.forEach(({ input, errorId }) => {
         if (!input) return;
         input.addEventListener('invalid', () => setFieldInvalid(input, true));
-        input.addEventListener('input', () => setFieldInvalid(input, !input.validity.valid));
-        input.addEventListener('blur', () => setFieldInvalid(input, !input.validity.valid && input.value.length > 0));
+        input.addEventListener('input', () => validateField(input, errorId));
+        input.addEventListener('blur', () => validateField(input, errorId));
     });
 
     $form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         // Validación
+        const allValid = fields.every(({ input }) => validateField(input, input.id + '-error'));
         const nameValue = $form.name.value.trim();
         const emailValue = $form.email.value.trim();
         const messageValue = $form.message.value.trim();
 
-        if (!nameValue || !emailValue || messageValue.length < 20) {
+        if (!nameValue || !emailValue || messageValue.length < 20 || !allValid) {
             return; 
         }
 
@@ -57,7 +72,10 @@ export const initContactForm = () => {
                 $form.setAttribute('hidden', '');
                 $successMsg.removeAttribute('hidden');
                 $form.reset();
-                fields.forEach(({ input }) => input?.removeAttribute('aria-invalid'));
+                fields.forEach(({ input, errorId }) => {
+                    input?.removeAttribute('aria-invalid');
+                    setErrorVisible(errorId, false);
+                });
             } else {
                 throw new Error();
             }
@@ -76,6 +94,9 @@ export const initContactForm = () => {
         $btn.disabled = false;
         $btn.textContent = 'Enviar Mensaje';
 
-        fields.forEach(({ input }) => input?.removeAttribute('aria-invalid'));
+        fields.forEach(({ input, errorId }) => {
+            input?.removeAttribute('aria-invalid');
+            setErrorVisible(errorId, false);
+        });
     });
 };

@@ -1,6 +1,13 @@
 export const initScrollReveal = () => {
     const $revealElements = document.querySelectorAll('.reveal');
 
+    // Si el usuario prefiere reducir movimiento, el contenido ya es visible
+    // por CSS (base/_animations.scss) y no hace falta observar nada.
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        $revealElements.forEach($el => $el.classList.add('reveal--active'));
+        return;
+    }
+
     const observerOptions = {
         root: null, // usa el viewport
         threshold: 0.15, // se activa cuando el 15% del elemento es visible

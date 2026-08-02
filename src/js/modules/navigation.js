@@ -9,29 +9,44 @@ export const initNavigation = () => {
     };
 
     if (menuToggle && nav) {
+        const firstLink = nav.querySelector('.nav__link');
+        const isMenuVisible = () => nav.classList.contains(MENU_VISIBLE_CLASS);
+
+        const closeMenu = (returnFocus = false) => {
+            nav.classList.remove(MENU_VISIBLE_CLASS);
+            menuToggle.setAttribute('aria-expanded', false);
+            updateMenuAriaLabel(false);
+            if (returnFocus) menuToggle.focus();
+        };
+
         menuToggle.addEventListener('click', () => {
-            nav.classList.toggle(MENU_VISIBLE_CLASS);
-            const isExpanded = nav.classList.contains(MENU_VISIBLE_CLASS);
-            menuToggle.setAttribute('aria-expanded', isExpanded);
-            updateMenuAriaLabel(isExpanded);
+            if (isMenuVisible()) {
+                closeMenu(true);
+            } else {
+                nav.classList.add(MENU_VISIBLE_CLASS);
+                menuToggle.setAttribute('aria-expanded', true);
+                updateMenuAriaLabel(true);
+                firstLink?.focus();
+            }
         });
 
         document.addEventListener('click', (e) => {
-            const isMenuVisible = nav.classList.contains(MENU_VISIBLE_CLASS);
             const isClickOutside = !nav.contains(e.target) && !menuToggle.contains(e.target);
 
-            if (isMenuVisible && isClickOutside) {
-                nav.classList.remove(MENU_VISIBLE_CLASS);
-                menuToggle.setAttribute('aria-expanded', false);
-                updateMenuAriaLabel(false);
+            if (isMenuVisible() && isClickOutside) {
+                closeMenu();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isMenuVisible()) {
+                closeMenu(true);
             }
         });
 
         nav.querySelectorAll('.nav__link').forEach(link => {
             link.addEventListener('click', () => {
-                nav.classList.remove(MENU_VISIBLE_CLASS);
-                menuToggle.setAttribute('aria-expanded', false);
-                updateMenuAriaLabel(false);
+                closeMenu();
             });
         });
     }

@@ -44,7 +44,7 @@ export const initNavigation = () => {
             }
         });
 
-        nav.querySelectorAll('.nav__link').forEach(link => {
+        nav.querySelectorAll('.nav__link').forEach((link) => {
             link.addEventListener('click', () => {
                 closeMenu();
             });

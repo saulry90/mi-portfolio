@@ -1,7 +1,7 @@
 export const initSmoothScroll = () => {
     const internalLinks = document.querySelectorAll('a[href^="#"]');
 
-    internalLinks.forEach(link => {
+    internalLinks.forEach((link) => {
         link.addEventListener('click', (e) => {
             const id = link.getAttribute('href');
 
@@ -13,7 +13,7 @@ export const initSmoothScroll = () => {
                 e.preventDefault();
 
                 targetElement.scrollIntoView({
-                    behavior: 'smooth'
+                    behavior: 'smooth',
                 });
 
                 // Gestión de Accesibilidad: Mover el foco al elemento destino
@@ -22,9 +22,13 @@ export const initSmoothScroll = () => {
                 targetElement.focus({ preventScroll: true });
 
                 // Quitar el foco al salir para mantener el HTML limpio
-                targetElement.addEventListener('blur', () => {
-                    targetElement.removeAttribute('tabindex');
-                }, { once: true });
+                targetElement.addEventListener(
+                    'blur',
+                    () => {
+                        targetElement.removeAttribute('tabindex');
+                    },
+                    { once: true },
+                );
 
                 // Actualizar la URL (para que el historial funcione)
                 window.history.pushState(null, null, id);

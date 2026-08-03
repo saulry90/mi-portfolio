@@ -3,51 +3,53 @@
 @use 'sass:color';
 
 .btn {
-  display: inline-block;
-  padding: 12px $space-md;
-  background-color: $color-light;
-  color: $color-text;
-  border-radius: 40px; 
-  font-size: $text-base;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  transition: background-color $transition-base, transform 0.2s ease, box-shadow $transition-base;
+    display: inline-block;
+    padding: 12px $space-md;
+    background-color: $color-light;
+    color: $color-text;
+    border-radius: 40px;
+    font-size: $text-base;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color $transition-base,
+        transform 0.2s ease,
+        box-shadow $transition-base;
 
-  &:active {
-    transform: scale(0.98);
-  }
+    &:active {
+        transform: scale(0.98);
+    }
 
-  &--primary {
-    background-color: $color-primary;
-    color: $color-light;
+    &--primary {
+        background-color: $color-primary;
+        color: $color-light;
 
-    &:hover {
-        background-color: color.adjust($color-primary, $lightness: -10%);
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-md);
+        &:hover {
+            background-color: color.adjust($color-primary, $lightness: -10%);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
 
-        html.is-dark & {
-          background-color: color.adjust($color-primary, $lightness: 5%);
-          box-shadow: 0 0 15px rgba($color-primary, 0.4);
+            html.is-dark & {
+                background-color: color.adjust($color-primary, $lightness: 5%);
+                box-shadow: 0 0 15px rgba($color-primary, 0.4);
+            }
         }
     }
-  }
 
-  &--secondary {
-    background-color: var(--bg-alt);
-    color: var(--text-main);
+    &--secondary {
+        background-color: var(--bg-alt);
+        color: var(--text-main);
 
-    &:hover {
-        background-color: var(--border-color);
+        &:hover {
+            background-color: var(--border-color);
+        }
     }
-  }
 
-  &--large {
-    @include mq(desktop) {
-      padding: $space-md $space-lg;
-      font-size: $text-lg;
+    &--large {
+        @include mq(desktop) {
+            padding: $space-md $space-lg;
+            font-size: $text-lg;
+        }
     }
-    
-  }
 }

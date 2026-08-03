@@ -2,20 +2,20 @@
 
 // Enlace "Saltar al contenido" — solo visible al navegar con teclado
 .skip-link {
-  position: absolute;
-  top: -100%;
-  left: 0;
-  z-index: 1000;
-  padding: $space-sm $space-md;
-  background-color: $color-primary;
-  color: $color-light;
-  font-size: $text-sm;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 0 0 8px 0;
-  transition: top 0.2s ease;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 1000;
+    padding: $space-sm $space-md;
+    background-color: $color-primary;
+    color: $color-light;
+    font-size: $text-sm;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 0 0 8px;
+    transition: top 0.2s ease;
 
-  &:focus {
-    top: 0;
-  }
+    &:focus {
+        top: 0;
+    }
 }

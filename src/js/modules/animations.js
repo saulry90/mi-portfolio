@@ -4,18 +4,18 @@ export const initScrollReveal = () => {
 
     // Si el usuario prefiere reducir movimiento, el contenido ya es visible por CSS (base/_animations.scss) y no hace falta observar nada.
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        $revealElements.forEach($el => $el.classList.add('reveal--active'));
+        $revealElements.forEach(($el) => $el.classList.add('reveal--active'));
         return;
     }
 
     const observerOptions = {
         root: null, // usa el viewport
         threshold: 0.15, // se activa cuando el 15% del elemento es visible
-        rootMargin: "0px 0px -80px 0px" // margen inferior para que no se active justo al borde
+        rootMargin: '0px 0px -80px 0px', // margen inferior para que no se active justo al borde
     };
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('reveal--active');
                 // Una vez animado, dejamos de observarlo para ahorrar recursos
@@ -24,5 +24,5 @@ export const initScrollReveal = () => {
         });
     }, observerOptions);
 
-    $revealElements.forEach($el => observer.observe($el));
+    $revealElements.forEach(($el) => observer.observe($el));
 };

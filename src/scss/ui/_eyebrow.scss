@@ -1,9 +1,9 @@
 @use '../base/variables' as *;
 
 .eyebrow {
-  display: inline-block;
-  margin-top: 0;
-  color: var(--text-main);
-  font-size: $text-xl;
-  font-weight: 400;
+    display: inline-block;
+    margin-top: 0;
+    color: var(--text-main);
+    font-size: $text-xl;
+    font-weight: 400;
 }

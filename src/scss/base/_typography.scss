@@ -5,9 +5,9 @@ body {
     font-family: $font-primary;
     font-size: $text-base;
     line-height: 1.6;
-    
+
     @include mq(desktop) {
-        font-size: 1.15rem; 
+        font-size: 1.15rem;
     }
 }
 
@@ -20,6 +20,6 @@ p {
     font-size: $text-title;
 
     @include mq(desktop) {
-      font-size: $text-title-lg;
+        font-size: $text-title-lg;
     }
 }

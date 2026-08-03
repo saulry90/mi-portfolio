@@ -14,76 +14,73 @@
     transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
     @include mq(desktop) {
-      position: static;
-      display: block;
-      width: auto;
-      background-color: transparent;
-      box-shadow: none;
-      transform: none;
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
+        position: static;
+        display: block;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
 
     /* Clase para mostrar el menú cuando se presiona el botón (JS) */
     &--visible {
-      grid-template-rows: 1fr;
+        grid-template-rows: 1fr;
     }
 
     /* === LISTA DEL MENÚ === */
     &__list {
-      min-height: 0;
-      display: flex;
-      flex-direction: column;
-      list-style: none;
-      margin: 0;
-      transition: padding 0.4s ease;
+        min-height: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        transition: padding 0.4s ease;
 
-      @include mq(desktop) {
-        flex-direction: row;
-        gap: $space-lg;
-        padding: 0;
-      }
+        @include mq(desktop) {
+            flex-direction: row;
+            gap: $space-lg;
+            padding: 0;
+        }
     }
 
     &__item {
-      @include mq(desktop, 'max') {
-        padding: $space-md $space-lg;
-        text-align: right;
-        border-top: 1px solid var(--border-color);
-      }
+        @include mq(desktop, 'max') {
+            padding: $space-md $space-lg;
+            text-align: right;
+            border-top: 1px solid var(--border-color);
+        }
     }
 
     /* === ENLACES === */
     &__link {
-      position: relative;
-      display: block;
-      color: var(--text-main);
-      text-decoration: none;
-      font-size: $text-base;
-      font-weight: 600;
+        position: relative;
+        display: block;
+        color: var(--text-main);
+        text-decoration: none;
+        font-size: $text-base;
+        font-weight: 600;
 
-      &::after {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background-color: $color-primary;
-        transform: translateX(-50%);
-        transition: width $transition-base;
-      }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: $color-primary;
+            transform: translateX(-50%);
+            transition: width $transition-base;
+        }
 
-      &:hover::after {
-        width: 100%;
-      }
-      
-      &:hover {
-        color: $color-primary;
-      }
+        &:hover::after {
+            width: 100%;
+        }
 
+        &:hover {
+            color: $color-primary;
+        }
     }
-
-
 }

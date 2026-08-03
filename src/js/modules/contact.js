@@ -8,7 +8,7 @@ export const initContactForm = () => {
     const fields = [
         { input: $form.name, errorId: 'name-error' },
         { input: $form.email, errorId: 'email-error' },
-        { input: $form.message, errorId: 'message-error' }
+        { input: $form.message, errorId: 'message-error' },
     ];
 
     const setFieldInvalid = (input, invalid) => {
@@ -50,7 +50,7 @@ export const initContactForm = () => {
         const messageValue = $form.message.value.trim();
 
         if (!nameValue || !emailValue || messageValue.length < 20 || !allValid) {
-            return; 
+            return;
         }
 
         const $btn = $form.querySelector('.form__submit');
@@ -65,7 +65,7 @@ export const initContactForm = () => {
             const response = await fetch($form.action, {
                 method: 'POST',
                 body: formData,
-                headers: { 'Accept': 'application/json' }
+                headers: { Accept: 'application/json' },
             });
 
             if (response.ok) {
@@ -78,12 +78,13 @@ export const initContactForm = () => {
                 });
             } else if (response.status === 429) {
                 // Rate limit de Formspree (20 posts/min por formulario)
-                $btn.textContent = 'Demasiados envíos seguidos. Espera un momento e inténtalo de nuevo.';
+                $btn.textContent =
+                    'Demasiados envíos seguidos. Espera un momento e inténtalo de nuevo.';
                 $btn.disabled = false;
             } else {
                 throw new Error();
             }
-        } catch (error) {
+        } catch {
             $btn.textContent = 'Error al enviar';
             $btn.disabled = false;
         }

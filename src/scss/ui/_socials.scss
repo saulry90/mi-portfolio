@@ -5,10 +5,11 @@
     display: flex;
     flex-direction: column;
     gap: $space-md;
+
     &__item {
         list-style: none;
 
-        .socials__link { 
+        .socials__link {
             display: flex;
             align-items: center;
             gap: $space-md;
@@ -26,24 +27,23 @@
             }
         }
     }
-    
-    
 
-    .socials__icon { 
+    .socials__icon {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 34px;        
+        width: 34px;
         height: 34px;
         border: 1px solid var(--text-muted);
         border-radius: 50%;
         font-size: $text-lg;
-        transition: background-color $transition-base, border-color $transition-base;
+        transition:
+            background-color $transition-base,
+            border-color $transition-base;
 
         @include mq(desktop) {
-            width: 42px;        
+            width: 42px;
             height: 42px;
         }
     }
 }
-

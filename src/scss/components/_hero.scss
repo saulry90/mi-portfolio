@@ -2,122 +2,122 @@
 @use '../base/mixins' as *;
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  min-height: calc(100vh - 46px); // Ajuste para altura de la barra de navegación
-  padding-bottom: $space-xl;
-  text-align: left;
-  color: var(--text-main);
-  font-family: $font-primary;
-
-  @include mq(tablet, 'max') { 
-    padding-top: $space-md;
-  }
-
-  @include mq(tablet, 'min', desktop) { 
-        min-height: auto; 
-        padding: $space-xl 0;
-  }
-
-  @include mq(desktop) {
-    justify-content: center;
-    height: calc(100vh - 75px);
-    padding-bottom: 0;
-  }
-
-  &__inner {
     display: flex;
     flex-direction: column;
-    gap: $space-lg;
-
-    @include mq(desktop) {
-      display: grid;
-      grid-template-columns: 55% 380px;
-      justify-content: space-between;
-      align-items: center;
-      transform: translateY(-7vh);
-    }
-  }
-
-  &__title {
-    display: block;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: calc(100vh - 46px); // Ajuste para altura de la barra de navegación
+    padding-bottom: $space-xl;
+    text-align: left;
     color: var(--text-main);
     font-family: $font-primary;
-    font-size: clamp(2.2rem, 12vw, $text-hero);
-    line-height: 1;
-    font-weight: 700;
 
-    @include mq(tablet) {
-      font-size: $text-hero-lg;
+    @include mq(tablet, 'max') {
+        padding-top: $space-md;
+    }
+
+    @include mq(tablet, 'min', desktop) {
+        min-height: auto;
+        padding: $space-xl 0;
     }
 
     @include mq(desktop) {
-      font-size: $text-hero-xl;
-    }
-  }
-
-  &__accent {
-    color: $color-primary;
-  }
-
-  &__subtitle {
-    display: block;
-    margin: $space-md 0;
-    color: var(--text-muted);
-    font-weight: 400;
-  }
-
-  &__actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-
-    @include mq(tablet) {
-        flex-direction: row;
-    }
-  }
-
-  &__button {
-    flex: 1 1 auto; 
-    max-width: 100%;
-
-    @include mq(tablet) {
-        flex: 0 0 auto; 
-        max-width: none;
-    }
-  }
-
-  &__media {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    @include mq(tablet) {
-        width: 100%; 
-        height: 100%;
-        margin-top: 0;
+        justify-content: center;
+        height: calc(100vh - 75px);
+        padding-bottom: 0;
     }
 
-    .hero__picture {
-        width: 60%;
-        max-width: 275px;
-    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: $space-lg;
+
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: 55% 380px;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-7vh);
+        }
+    }
+
+    &__title {
+        display: block;
+        color: var(--text-main);
+        font-family: $font-primary;
+        font-size: clamp(2.2rem, 12vw, $text-hero);
+        line-height: 1;
+        font-weight: 700;
+
         @include mq(tablet) {
-            width: 275px;
+            font-size: $text-hero-lg;
         }
 
         @include mq(desktop) {
-            width: 100%;
-            max-width: 100%;
-            height: 380px;
-            padding: $space-lg;
-            border-radius: 50%;
-            border: 1px solid var(--hero-border);
-            overflow: hidden;
+            font-size: $text-hero-xl;
         }
     }
-  }
+
+    &__accent {
+        color: $color-primary;
+    }
+
+    &__subtitle {
+        display: block;
+        margin: $space-md 0;
+        color: var(--text-muted);
+        font-weight: 400;
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+
+        @include mq(tablet) {
+            flex-direction: row;
+        }
+    }
+
+    &__button {
+        flex: 1 1 auto;
+        max-width: 100%;
+
+        @include mq(tablet) {
+            flex: 0 0 auto;
+            max-width: none;
+        }
+    }
+
+    &__media {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include mq(tablet) {
+            width: 100%;
+            height: 100%;
+            margin-top: 0;
+        }
+
+        .hero__picture {
+            width: 60%;
+            max-width: 275px;
+
+            @include mq(tablet) {
+                width: 275px;
+            }
+
+            @include mq(desktop) {
+                width: 100%;
+                max-width: 100%;
+                height: 380px;
+                padding: $space-lg;
+                border-radius: 50%;
+                border: 1px solid var(--hero-border);
+                overflow: hidden;
+            }
+        }
+    }
 }

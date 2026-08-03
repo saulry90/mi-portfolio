@@ -8,18 +8,18 @@
     transition: $transition-base;
 
     &:hover {
-      color: $color-primary;
+        color: $color-primary;
 
-      .deco-dot {
-        color: var(--text-main);
-      }
+        .deco-dot {
+            color: var(--text-main);
+        }
     }
 
-    .header--scrolled & { 
+    .header--scrolled & {
         font-size: $text-lg;
     }
 
     &__accent {
-      font-weight: 300;
+        font-weight: 300;
     }
-  }
+}

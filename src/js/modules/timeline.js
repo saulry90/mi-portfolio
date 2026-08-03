@@ -10,7 +10,7 @@ export const initTimeline = () => {
 
     if (reduceMotion) {
         // Sin animaciones: todo el contenido visible y todas las líneas dibujadas
-        $items.forEach($item => {
+        $items.forEach(($item) => {
             const $card = $item.querySelector('.experience__card');
             if ($card) $card.classList.add('reveal--active');
             $item.classList.add('is-drawn');
@@ -37,7 +37,11 @@ export const initTimeline = () => {
             rects.push(itemRect);
 
             const $card = $item.querySelector('.experience__card');
-            if ($card && !$card.classList.contains('reveal--active') && itemRect.top <= triggerLine) {
+            if (
+                $card &&
+                !$card.classList.contains('reveal--active') &&
+                itemRect.top <= triggerLine
+            ) {
                 $card.classList.add('reveal--active');
 
                 // La línea de este item espera a que termine su aparición

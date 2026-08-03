@@ -19,35 +19,35 @@ $color-muted-dark: #a0a0a0;
 // VARIABLES DINÁMICAS (DARK MODE)
 // ------------------------------------
 :root {
-  // Valores para Modo Claro
-  --bg-color: #{$color-light};
-  --bg-alt: #{$color-secondary};
-  --text-main: #{$color-text};
-  --text-muted: #{$color-muted};
-  --border-color: rgba(0, 0, 0, 0.1);
-  --shadow-color: rgba(0, 0, 0, 0.1);
-  --hero-border: #{$color-primary}63;
-  --timeline-line: #eaeaea;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
-  --shadow-card: 0 6px 12px rgba(0, 0, 0, 0.1);
+    // Valores para Modo Claro
+    --bg-color: #{$color-light};
+    --bg-alt: #{$color-secondary};
+    --text-main: #{$color-text};
+    --text-muted: #{$color-muted};
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --hero-border: #{$color-primary}63;
+    --timeline-line: #eaeaea;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+    --shadow-card: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 html.is-dark {
-  // Valores para Modo Oscuro
-  --bg-color: #{$color-dark};
-  --bg-alt: #{$color-bg-alt-dark};
-  --text-main: #{$color-light};
-  --text-muted: #{$color-muted-dark};
-  --border-color: rgba(255, 255, 255, 0.1);
-  --shadow-color: rgba(0, 0, 0, 0.4);
-  --hero-border: #{$color-primary-dark};
-  --timeline-line: #{$color-muted-dark};
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.45);
-  --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.35);
+    // Valores para Modo Oscuro
+    --bg-color: #{$color-dark};
+    --bg-alt: #{$color-bg-alt-dark};
+    --text-main: #{$color-light};
+    --text-muted: #{$color-muted-dark};
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --hero-border: #{$color-primary-dark};
+    --timeline-line: #{$color-muted-dark};
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.45);
+    --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 // ------------------------------------
@@ -59,13 +59,13 @@ $font-base-size: 1rem;
 
 // TAMAÑOS DE FUENTE
 $text-sizes: (
-  xs: 0.75rem,
-  sm: 0.875rem,
-  base: 1rem,
-  lg: 1.25rem,
-  xl: 1.5rem,
-  '2xl': 2rem,
-  '3xl': 3rem,
+    xs: 0.75rem,
+    sm: 0.875rem,
+    base: 1rem,
+    lg: 1.25rem,
+    xl: 1.5rem,
+    '2xl': 2rem,
+    '3xl': 3rem,
 );
 
 // Variables individuales para fácil acceso
@@ -91,7 +91,6 @@ $form-input-height: 56px;
 $form-label-size: 12px;
 $form-error-size: 11px;
 
-
 // ------------------------------------
 // LAYOUT
 // ------------------------------------
@@ -108,7 +107,6 @@ $space-lg: 32px;
 $space-xl: 64px;
 $space-2xl: 128px;
 
-
 // ------------------------------------
 // SOMBRAS
 // ------------------------------------
@@ -116,14 +114,12 @@ $shadow-sm: var(--shadow-sm);
 $shadow-md: var(--shadow-md);
 $shadow-lg: var(--shadow-lg);
 
-
 // ------------------------------------
 // TRANSICIONES
 // ------------------------------------
 $transition-duration: 0.3s;
 $transition-timing: ease;
 $transition-base: $transition-duration $transition-timing;
-
 
 // ------------------------------------
 // BREAKPOINTS
@@ -134,7 +130,7 @@ $bp-desktop: 1024px;
 
 // Mapa de breakpoints para usar con Mixins de Media Queries (Recomendado)
 $breakpoints: (
-  mobile: $bp-mobile,
-  tablet: $bp-tablet,
-  desktop: $bp-desktop,
+    mobile: $bp-mobile,
+    tablet: $bp-tablet,
+    desktop: $bp-desktop,
 );

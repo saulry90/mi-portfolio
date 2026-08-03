@@ -29,13 +29,14 @@
             box-shadow: 0 0 0 2px rgba($color-primary, 0.2);
         }
 
-        &:focus + .form__label, &:not(:placeholder-shown) + .form__label {
+        &:focus + .form__label,
+        &:not(:placeholder-shown) + .form__label {
             top: 8px;
             color: $color-primary;
             font-size: $form-label-size;
             font-weight: 700;
         }
-        
+
         &::placeholder {
             color: transparent;
             opacity: 0.8;
@@ -55,10 +56,10 @@
             color: $color-error;
         }
 
-        &:not(:placeholder-shown):not(:focus):invalid {
+        &:not(:placeholder-shown, :focus):invalid {
             border: 1px solid $color-error;
             box-shadow: 0 0 0 2px rgba($color-error, 0.2);
-            
+
             & + .form__label {
                 color: $color-error;
             }
@@ -91,6 +92,7 @@
         color: $color-error;
         font-size: $form-error-size;
         font-weight: 700;
+
         // Estado inicial oculto
         opacity: 0;
         visibility: hidden;
@@ -127,13 +129,15 @@
     }
 
     @keyframes form-spin {
-        to { transform: rotate(360deg); }
+        to {
+            transform: rotate(360deg);
+        }
     }
 
     &__success {
         padding: $space-sm 0;
         text-align: center;
-        animation: fadeIn 0.5s ease;
+        animation: fade-in 0.5s ease;
 
         &-content {
             .fa-paper-plane {
@@ -142,19 +146,26 @@
                 font-size: 3rem;
             }
 
-            h3 { 
+            h3 {
                 margin-bottom: $space-md;
             }
 
-            p { 
-                margin-bottom: $space-lg; 
-                color: $color-text; 
+            p {
+                margin-bottom: $space-lg;
+                color: $color-text;
             }
         }
     }
 
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+    @keyframes fade-in {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }

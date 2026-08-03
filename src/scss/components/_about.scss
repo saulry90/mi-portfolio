@@ -2,69 +2,64 @@
 @use '../base/mixins' as *;
 
 .about {
-  padding-bottom: $space-xl;
+    padding-bottom: $space-xl;
 
-  @include mq(tablet) {
-    padding: $space-2xl 0;
-  }
-
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: $space-xl;
-    width: 100%;
-
-    @include mq(desktop) {
-      gap: $space-2xl;
-    }
-  }
-
-  &__text {
-    position: relative;
-    margin-bottom: $space-md;
-    color: var(--text-muted);
-    line-height: 1.7;
-  }
-
-  &__skills {
-    &__title {
-      margin-bottom: $space-md;
-      font-size: $text-block-title;
-      font-weight: 500;
-
-      @include mq(desktop) {
-        margin-bottom: $space-lg;
-        font-size: $text-block-title-lg;
-      }
+    @include mq(tablet) {
+        padding: $space-2xl 0;
     }
 
     &__content {
-      display: grid;
-      grid-template-columns: 1fr;
-      row-gap: $space-lg;
+        display: flex;
+        flex-direction: column;
+        gap: $space-xl;
+        width: 100%;
 
-      @include mq(desktop) {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: $space-xl;
-      }
+        @include mq(desktop) {
+            gap: $space-2xl;
+        }
     }
-    
-  }
 
-
-  &__experience { 
-     &__title {
-      margin-bottom: $space-md;
-      font-size: $text-xl;
-      font-weight: 500;    
-
-      @include mq(desktop) {
-        margin-bottom: $space-lg;
-        font-size: $text-block-title-lg;
-      }
+    &__text {
+        position: relative;
+        margin-bottom: $space-md;
+        color: var(--text-muted);
+        line-height: 1.7;
     }
-    
-  }
 
+    &__skills {
+        &__title {
+            margin-bottom: $space-md;
+            font-size: $text-block-title;
+            font-weight: 500;
 
+            @include mq(desktop) {
+                margin-bottom: $space-lg;
+                font-size: $text-block-title-lg;
+            }
+        }
+
+        &__content {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: $space-lg;
+
+            @include mq(desktop) {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: $space-xl;
+            }
+        }
+    }
+
+    &__experience {
+        &__title {
+            margin-bottom: $space-md;
+            font-size: $text-xl;
+            font-weight: 500;
+
+            @include mq(desktop) {
+                margin-bottom: $space-lg;
+                font-size: $text-block-title-lg;
+            }
+        }
+    }
 }

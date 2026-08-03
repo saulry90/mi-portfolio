@@ -2,38 +2,38 @@
 @use '../base/mixins' as *;
 
 .projects {
-  padding-bottom: $space-xl;
-
-  @include mq(tablet) {
-    padding: $space-2xl 0;
-  }
-
-  .section__subtitle {
-    display: block;
-    margin-bottom: $space-lg;
-    color: $color-text;
-    text-align: left;
-    font-size: $text-lg;
-    font-weight: 400;
-  }
-
-  &__gallery {
-    display: flex;
-    flex-direction: column;
-    gap: $space-lg;
-    width: 100%;
-    margin-top: $space-md;
+    padding-bottom: $space-xl;
 
     @include mq(tablet) {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: $space-2xl 0;
     }
 
-    @include mq(desktop) {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: $space-xl;
-      margin-top: $space-lg;
+    .section__subtitle {
+        display: block;
+        margin-bottom: $space-lg;
+        color: $color-text;
+        text-align: left;
+        font-size: $text-lg;
+        font-weight: 400;
     }
-  }
+
+    &__gallery {
+        display: flex;
+        flex-direction: column;
+        gap: $space-lg;
+        width: 100%;
+        margin-top: $space-md;
+
+        @include mq(tablet) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        @include mq(desktop) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: $space-xl;
+            margin-top: $space-lg;
+        }
+    }
 }

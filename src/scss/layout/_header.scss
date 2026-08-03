@@ -2,29 +2,29 @@
 @use '../base/mixins' as *;
 
 .header {
-  position: sticky;
-  top: 0;
-  display: flex;
-  padding: $space-md 0;
-  background-color: var(--bg-color);
-  z-index: 10;
-
-  @include mq(tablet) {
-    height: $header-height;
-  }
-
-  &--scrolled {
-    background-color: var(--bg-color);
-    box-shadow: $shadow-sm;
-  }
-
-  &__inner {
+    position: sticky;
+    top: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: $space-md 0;
+    background-color: var(--bg-color);
+    z-index: 10;
 
-    .logo {
-      width: 145px;
+    @include mq(tablet) {
+        height: $header-height;
     }
-  }
+
+    &--scrolled {
+        background-color: var(--bg-color);
+        box-shadow: $shadow-sm;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 145px;
+        }
+    }
 }

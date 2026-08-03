@@ -9,25 +9,25 @@
     list-style: none;
 
     &__item {
-      display: flex; 
-      align-items: center;
-      justify-content: flex-start;
-      gap: $space-xs;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: $space-xs;
 
-      svg { 
-        display: block;
-        width: 25px;
-        height: 25px;
-        object-fit: contain;
-        opacity: 0.9;
-        transition: $transition-base;
-        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
-      }
+        svg {
+            display: block;
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+            opacity: 0.9;
+            transition: $transition-base;
+            filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.1));
+        }
     }
 
     &__name {
-      font-size: $text-sm;
-      font-weight: 600;
-      color: $color-text;
+        font-size: $text-sm;
+        font-weight: 600;
+        color: $color-text;
     }
-  }
+}

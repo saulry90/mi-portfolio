@@ -6,7 +6,7 @@ export const initTheme = () => {
 
     toggleButton.addEventListener('click', () => {
         htmlElement.classList.toggle('is-dark');
-        
+
         // Guardar preferencia en localStorage
         const isDark = htmlElement.classList.contains('is-dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');

@@ -432,19 +432,19 @@
               </div>
 
               <div class="form__group">
-                <input type="text" id="name" name="name" class="form__input" placeholder=" " required pattern="^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$" title="Solo letras" aria-describedby="name-error">
+                <input type="text" id="name" name="name" class="form__input" placeholder=" " required pattern="^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$" maxlength="50" title="Solo letras" aria-describedby="name-error">
                 <label for="name" class="form__label">Nombre</label>
                 <span id="name-error" class="form__error" aria-live="polite">Solo se permiten letras</span>
               </div>
 
               <div class="form__group">
-                <input type="email" id="email" name="email" class="form__input" placeholder=" " required aria-describedby="email-error">
+                <input type="email" id="email" name="email" class="form__input" placeholder=" " required maxlength="254" aria-describedby="email-error">
                 <label for="email" class="form__label">Email</label>
                 <span id="email-error" class="form__error" aria-live="polite">Introduce un email válido</span>
               </div>
 
               <div class="form__group">
-                <textarea id="message" name="message" class="form__textarea" placeholder=" " required minlength="20" aria-describedby="message-error"></textarea>
+                <textarea id="message" name="message" class="form__textarea" placeholder=" " required minlength="20" maxlength="2000" aria-describedby="message-error"></textarea>
                 <label for="message" class="form__label">Mensaje</label>
                 <span id="message-error" class="form__error" aria-live="polite">Mínimo 20 caracteres</span>
               </div>

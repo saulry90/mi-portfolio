@@ -76,6 +76,10 @@ export const initContactForm = () => {
                     input?.removeAttribute('aria-invalid');
                     setErrorVisible(errorId, false);
                 });
+            } else if (response.status === 429) {
+                // Rate limit de Formspree (20 posts/min por formulario)
+                $btn.textContent = 'Demasiados envíos seguidos. Espera un momento e inténtalo de nuevo.';
+                $btn.disabled = false;
             } else {
                 throw new Error();
             }

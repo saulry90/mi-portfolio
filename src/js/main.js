@@ -6,6 +6,7 @@ import { initNavigation } from './modules/navigation.js';
 import { initTheme } from './modules/theme.js';
 import { initContactForm } from './modules/contact.js';
 import { initScrollReveal } from './modules/animations.js';
+import { initTimeline } from './modules/timeline.js';
 import { initSmoothScroll } from './modules/scroll.js';
 import { initFooter } from './modules/footer.js';
 
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initContactForm();
   initScrollReveal();
+  initTimeline();
   initSmoothScroll();
   initFooter();
 });

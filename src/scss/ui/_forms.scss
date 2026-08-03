@@ -114,6 +114,22 @@
         width: 100%;
     }
 
+    &__spinner {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin-right: $space-sm;
+        vertical-align: -0.125em;
+        border: 2px solid rgba($color-light, 0.35);
+        border-top-color: $color-light;
+        border-radius: 50%;
+        animation: form-spin 0.7s linear infinite;
+    }
+
+    @keyframes form-spin {
+        to { transform: rotate(360deg); }
+    }
+
     &__success {
         padding: $space-sm 0;
         text-align: center;

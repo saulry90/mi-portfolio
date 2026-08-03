@@ -21,6 +21,21 @@ body {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   transition: background-color $transition-base, color $transition-base, border-color $transition-base, box-shadow $transition-base;
+  animation: page-fade 0.5s ease;
+
+  @keyframes page-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}
+
+// Fallback global para el cambio de tema: transiciona colores en elementos que no definen su propia transition (las reglas específicas la sobreescriben).
+*,
+*::before,
+*::after {
+  transition-property: background-color, color, border-color, box-shadow;
+  transition-duration: $transition-duration;
+  transition-timing-function: $transition-timing;
 }
 
 section {
@@ -63,4 +78,16 @@ button {
 
 [hidden] {
   display: none !important;
+}
+
+// Respeta la preferencia de reducir movimiento: anula animaciones y transiciones
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

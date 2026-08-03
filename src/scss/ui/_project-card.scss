@@ -4,11 +4,13 @@
   .project {
     display: flex;
     flex-direction: column; 
-    transition: transform $transition-base;
 
     &:hover {
       .project__image {
-          img {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-card);
+
+        img {
           transform: scale(1.05);
         }
       }
@@ -27,6 +29,7 @@
       background-color: var(--bg-alt);
       border-radius: $space-md;
       overflow: hidden;
+      transition: transform $transition-base, box-shadow $transition-base;
 
       @include mq(desktop) {
         padding: $space-lg;

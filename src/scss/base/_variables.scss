@@ -27,9 +27,11 @@ $color-muted-dark: #a0a0a0;
   --border-color: rgba(0, 0, 0, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.1);
   --hero-border: #{$color-primary}63;
+  --timeline-line: #eaeaea;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.15);
+  --shadow-card: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 html.is-dark {
@@ -41,9 +43,11 @@ html.is-dark {
   --border-color: rgba(255, 255, 255, 0.1);
   --shadow-color: rgba(0, 0, 0, 0.4);
   --hero-border: #{$color-primary-dark};
+  --timeline-line: #{$color-muted-dark};
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.35);
 }
 
 // ------------------------------------

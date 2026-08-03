@@ -1,8 +1,8 @@
 export const initScrollReveal = () => {
-    const $revealElements = document.querySelectorAll('.reveal');
+    // Los items de experiencia se animan con el timeline (timeline.js) para que su aparición coincida exactamente con el crecimiento de la línea.
+    const $revealElements = document.querySelectorAll('.reveal:not(.experience__card)');
 
-    // Si el usuario prefiere reducir movimiento, el contenido ya es visible
-    // por CSS (base/_animations.scss) y no hace falta observar nada.
+    // Si el usuario prefiere reducir movimiento, el contenido ya es visible por CSS (base/_animations.scss) y no hace falta observar nada.
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         $revealElements.forEach($el => $el.classList.add('reveal--active'));
         return;

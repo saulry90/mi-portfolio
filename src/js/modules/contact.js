@@ -57,7 +57,7 @@ export const initContactForm = () => {
 
         // 1. Estado "Enviando"
         $btn.disabled = true;
-        $btn.innerHTML = '<span>Enviando...</span>';
+        $btn.innerHTML = '<span class="form__spinner" aria-hidden="true"></span>Enviando...';
 
         const formData = new FormData($form);
 

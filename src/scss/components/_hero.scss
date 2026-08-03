@@ -45,7 +45,7 @@
     display: block;
     color: var(--text-main);
     font-family: $font-primary;
-    font-size: $text-hero;
+    font-size: clamp(2.2rem, 12vw, $text-hero);
     line-height: 1;
     font-weight: 700;
 

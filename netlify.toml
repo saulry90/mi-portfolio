@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "dist"
 
+[build.environment]
+  # Misma versión mayor que en desarrollo local (v22) para que el build en
+  # Netlify no dependa del default cambiante de la plataforma (Vite 7 pide >=20.19).
+  NODE_VERSION = "22"
+
 [[headers]]
   for = "/*"
   [headers.values]

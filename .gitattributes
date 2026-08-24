@@ -1,0 +1,2 @@
+# Los hooks de husky se ejecutan con sh: fuerzan LF para que CRLF no los rompa
+.husky/* text eol=lf

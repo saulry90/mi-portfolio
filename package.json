@@ -13,7 +13,8 @@
     "format:check": "prettier --check \"src/**/*.{js,scss}\" \"tests/**/*.js\" \"*.config.js\"",
     "test": "npm run build && playwright test",
     "test:a11y": "npm run build && playwright test tests/a11y.spec.js",
-    "test:perf": "npm run build && node tests/performance.js"
+    "test:perf": "npm run build && node tests/performance.js",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",
@@ -23,7 +24,9 @@
     "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.9.0",
+    "husky": "^9.1.7",
     "lighthouse": "^13.4.1",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.9.6",
     "sass": "^1.93.2",
     "stylelint": "^17.14.1",
@@ -34,5 +37,15 @@
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
     "@fortawesome/free-brands-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0"
+  },
+  "lint-staged": {
+    "*.{js,mjs}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint --fix",
+      "prettier --write"
+    ]
   }
 }

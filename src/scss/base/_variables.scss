@@ -12,6 +12,7 @@ $color-error: #ff6b6b;
 $color-success: #3dbe5b;
 $color-muted: #666666;
 $color-primary-dark: #484d7f;
+$color-primary-light: #7f87e8;
 $color-bg-alt-dark: #242424;
 $color-muted-dark: #a0a0a0;
 
@@ -24,6 +25,7 @@ $color-muted-dark: #a0a0a0;
     --bg-alt: #{$color-secondary};
     --text-main: #{$color-text};
     --text-muted: #{$color-muted};
+    --text-accent: #{$color-primary};
     --border-color: rgba(0, 0, 0, 0.1);
     --shadow-color: rgba(0, 0, 0, 0.1);
     --hero-border: #{$color-primary}63;
@@ -40,6 +42,7 @@ html.is-dark {
     --bg-alt: #{$color-bg-alt-dark};
     --text-main: #{$color-light};
     --text-muted: #{$color-muted-dark};
+    --text-accent: #{$color-primary-light};
     --border-color: rgba(255, 255, 255, 0.1);
     --shadow-color: rgba(0, 0, 0, 0.4);
     --hero-border: #{$color-primary-dark};

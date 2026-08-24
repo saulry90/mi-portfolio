@@ -28,6 +28,14 @@ export default [
             },
         },
     },
+    {
+        files: ['playwright.config.js', 'tests/**/*.js'],
+        languageOptions: {
+            globals: {
+                ...globals.node,
+            },
+        },
+    },
     // Desactiva las reglas de ESLint que chocan con Prettier (debe ir al final)
     prettier,
 ];

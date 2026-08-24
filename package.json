@@ -9,15 +9,21 @@
     "preview": "vite preview",
     "lint": "eslint . && stylelint \"src/scss/**/*.scss\"",
     "lint:fix": "eslint . --fix && stylelint \"src/scss/**/*.scss\" --fix",
-    "format": "prettier --write \"src/**/*.{js,scss}\"",
-    "format:check": "prettier --check \"src/**/*.{js,scss}\""
+    "format": "prettier --write \"src/**/*.{js,scss}\" \"tests/**/*.js\" \"*.config.js\"",
+    "format:check": "prettier --check \"src/**/*.{js,scss}\" \"tests/**/*.js\" \"*.config.js\"",
+    "test": "npm run build && playwright test",
+    "test:a11y": "npm run build && playwright test tests/a11y.spec.js",
+    "test:perf": "npm run build && node tests/performance.js"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.12.1",
     "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.9.0",
+    "lighthouse": "^13.4.1",
     "prettier": "^3.9.6",
     "sass": "^1.93.2",
     "stylelint": "^17.14.1",

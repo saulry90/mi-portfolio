@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Playwright
+test-results
+playwright-report
+blob-report
+
+# Lighthouse (informes completos, no versionados)
+reports
+
 # CSS compilado manualmente (ahora Vite genera el CSS desde SCSS)
 src/css/
 

@@ -1,5 +1,7 @@
 # Portfolio Personal – Saul Roldan
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5412b98b-dd31-4f36-8d75-fb74b96c374b/deploy-status)](https://app.netlify.com/sites/portfolio-saul/deploys)
+
 Este proyecto es mi portfolio personal, desarrollado con **HTML, CSS y JavaScript** (base Vite).  
 Su objetivo es mostrar mis habilidades como maquetador web y desarrollador frontend.
 

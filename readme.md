@@ -50,6 +50,7 @@ npm run preview # Sirve el build localmente
 | `npm test` | Build + suite completa de Playwright |
 | `npm run test:a11y` | Solo tests de accesibilidad |
 | `npm run test:perf` | Lighthouse contra el build; compara con el baseline |
+| `npm run prepare` | Activa los hooks de git de Husky (se ejecuta solo tras `npm install`) |
 
 ### Tests automatizados (`tests/`)
 

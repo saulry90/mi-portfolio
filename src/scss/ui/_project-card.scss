@@ -114,4 +114,11 @@
             margin-bottom: auto;
         }
     }
+
+    &__note {
+        margin: 0;
+        font-size: $text-sm;
+        font-style: italic;
+        color: var(--text-muted);
+    }
 }

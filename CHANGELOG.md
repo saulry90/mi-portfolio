@@ -7,6 +7,16 @@ y este proyecto se adhiere al [Versionado Semántico](https://semver.org/lang/es
 
 ## [Unreleased]
 
+### Cambiado
+
+- Revisión editorial alineada con el CV: hero («Desarrollador Frontend») y «Sobre mí»
+  reescritos, y tecnologías reagrupadas (Frontend · UI y calidad · CMS y presentación ·
+  Herramientas · Diseño y prototipado).
+- Experiencia actualizada: se añade la etapa previa en Aprendemás (2013–2019).
+- Proyectos destacados renovados: «Xilófono interactivo» (repositorio propio) y «Frontend
+  para e-commerce educativo» (experiencia en iLERNA) sustituyen a Taller Car Service y
+  Fund 7IM / AAP Fund.
+
 ## [1.0.0] - 2026-08-24
 
 ### Añadido

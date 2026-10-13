@@ -16,6 +16,10 @@ y este proyecto se adhiere al [Versionado Semántico](https://semver.org/lang/es
 - Proyectos destacados renovados: «Xilófono interactivo» (repositorio propio) y «Frontend
   para e-commerce educativo» (experiencia en iLERNA) sustituyen a Taller Car Service y
   Fund 7IM / AAP Fund.
+- Tarjetas de proyecto con enlaces reales: «Xilófono interactivo» enlaza a la demo y añade
+  un enlace secundario al repositorio en GitHub; «Frontend para e-commerce educativo» enlaza
+  al sitio de iLERNA.
+- CV actualizado (`public/CV26-SAUL-ROLDAN.pdf`).
 
 ## [1.0.0] - 2026-08-24
 

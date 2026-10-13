@@ -2,6 +2,7 @@
 @use '../base/mixins' as *;
 
 .project {
+    position: relative;
     display: flex;
     flex-direction: column;
 
@@ -53,7 +54,6 @@
     }
 
     &__content {
-        position: relative;
         display: flex;
         flex-direction: column;
         gap: $space-md;
@@ -78,8 +78,28 @@
         font-size: $text-lg;
         font-weight: 700;
 
+        // En varias columnas, reserva el alto de dos líneas para que las
+        // tarjetas queden alineadas aunque un título ocupe una o dos líneas.
+        @include mq(tablet) {
+            min-height: calc(2 * 1.6em);
+        }
+
         @include mq(desktop) {
             font-size: $text-xl;
+        }
+    }
+
+    // Enlace que cubre toda la tarjeta (patrón «stretched link»).
+    &__link {
+        &::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 3px;
         }
     }
 
@@ -120,5 +140,37 @@
         font-size: $text-sm;
         font-style: italic;
         color: var(--text-muted);
+    }
+
+    &__actions {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        gap: $space-sm;
+    }
+
+    &__action {
+        display: inline-flex;
+        align-items: center;
+        gap: $space-xs;
+        padding: $space-xs $space-sm;
+        background-color: var(--bg-alt);
+        border-radius: $space-sm;
+        color: var(--text-main);
+        font-size: $text-sm;
+        font-weight: 600;
+        transition:
+            background-color $transition-base,
+            color $transition-base;
+
+        &:hover {
+            background-color: $color-primary;
+            color: $color-light;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
     }
 }
